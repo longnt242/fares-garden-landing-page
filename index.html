@@ -188,32 +188,45 @@
           <a
             class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1"
             href="#"
+            data-i18n="nav.portfolio"
             >Portfolio</a
           >
           <a
             class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
             href="#"
+            data-i18n="nav.services"
             >Services</a
           >
           <a
             class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
             href="#"
+            data-i18n="nav.plants"
             >Plants</a
           >
           <a
             class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
             href="#"
+            data-i18n="nav.about"
             >About</a
           >
         </div>
         <div class="flex items-center gap-4">
           <button
+            id="langToggle"
+            type="button"
+            class="font-label-md text-label-md px-4 py-2.5 rounded-full border-[1.5px] border-primary text-primary hover:bg-primary/5 transition-all"
+          >
+            VI
+          </button>
+          <button
             class="hidden md:block font-label-md text-label-md px-6 py-2.5 rounded-full border-[1.5px] border-primary text-primary hover:bg-primary/5 transition-all"
+            data-i18n="nav.shop"
           >
             Shop
           </button>
           <button
             class="font-label-md text-label-md px-6 py-2.5 rounded-full bg-primary text-white shadow-[0px_10px_30px_rgba(40,72,72,0.05)] hover:opacity-90 transition-all active:scale-95"
+            data-i18n="nav.consultation"
           >
             Consultation
           </button>
@@ -238,18 +251,21 @@
         <div class="max-w-2xl">
           <span
             class="inline-block font-label-md text-label-md text-secondary tracking-widest uppercase mb-4"
+            data-i18n="hero.eyebrow"
             >Ornamental Perfection</span
           >
           <h1
             class="font-display-lg text-[44px] md:text-display-lg leading-tight text-primary mb-6"
           >
-            Bring Nature Into <br /><span
+            <span data-i18n="hero.title">Bring Nature Into</span> <br /><span
               class="text-secondary italic font-medium"
+              data-i18n="hero.titleAccent"
               >Every Space</span
             >
           </h1>
           <p
             class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg"
+            data-i18n="hero.description"
           >
             Elevate your environment with curated miniature plant collections
             and bespoke landscaping designed for modern living and corporate
@@ -258,11 +274,13 @@
           <div class="flex flex-wrap gap-4">
             <button
               class="font-label-md text-label-md px-8 py-4 bg-primary text-white rounded-full shadow-[0px_10px_30px_rgba(40,72,72,0.1)] hover:opacity-95 transition-all"
+              data-i18n="hero.shopPlants"
             >
               Shop Plants
             </button>
             <button
               class="font-label-md text-label-md px-8 py-4 border-[1.5px] border-primary text-primary rounded-full hover:bg-primary/5 transition-all"
+              data-i18n="hero.requestConsultation"
             >
               Request Consultation
             </button>
@@ -278,10 +296,16 @@
         class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
       >
         <div>
-          <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+          <h2
+            class="font-headline-lg text-headline-lg text-primary mb-4"
+            data-i18n="featured.title"
+          >
             Curated Collection
           </h2>
-          <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          <p
+            class="font-body-md text-body-md text-on-surface-variant max-w-md"
+            data-i18n="featured.subtitle"
+          >
             Our seasonal selection of rare miniature plants, expertly nurtured
             for architectural beauty.
           </p>
@@ -289,6 +313,7 @@
         <a
           class="font-label-md text-label-md text-primary flex items-center gap-2 group transition-all"
           href="#"
+          data-i18n="featured.viewAll"
         >
           View All Plants
           <span
@@ -318,15 +343,22 @@
             </div>
           </div>
           <div class="px-2">
-            <h3 class="font-headline-md text-body-lg text-primary mb-1">
+            <h3
+              class="font-headline-md text-body-lg text-primary mb-1"
+              data-i18n="featured.card1.name"
+            >
               Architectural Fern
             </h3>
-            <p class="font-body-md text-label-md text-on-surface-variant mb-4">
+            <p
+              class="font-body-md text-label-md text-on-surface-variant mb-4"
+              data-i18n="featured.card1.price"
+            >
               $85.00
             </p>
             <div class="flex gap-2">
               <button
                 class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
+                data-i18n="featured.cta"
               >
                 Add to Cart
               </button>
@@ -360,15 +392,22 @@
             </div>
           </div>
           <div class="px-2">
-            <h3 class="font-headline-md text-body-lg text-primary mb-1">
+            <h3
+              class="font-headline-md text-body-lg text-primary mb-1"
+              data-i18n="featured.card2.name"
+            >
               Fares Garden Fig Var.
             </h3>
-            <p class="font-body-md text-label-md text-on-surface-variant mb-4">
+            <p
+              class="font-body-md text-label-md text-on-surface-variant mb-4"
+              data-i18n="featured.card2.price"
+            >
               $120.00
             </p>
             <div class="flex gap-2">
               <button
                 class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
+                data-i18n="featured.cta"
               >
                 Add to Cart
               </button>
@@ -396,15 +435,22 @@
             />
           </div>
           <div class="px-2">
-            <h3 class="font-headline-md text-body-lg text-primary mb-1">
+            <h3
+              class="font-headline-md text-body-lg text-primary mb-1"
+              data-i18n="featured.card3.name"
+            >
               Desert Harmony
             </h3>
-            <p class="font-body-md text-label-md text-on-surface-variant mb-4">
+            <p
+              class="font-body-md text-label-md text-on-surface-variant mb-4"
+              data-i18n="featured.card3.price"
+            >
               $65.00
             </p>
             <div class="flex gap-2">
               <button
                 class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
+                data-i18n="featured.cta"
               >
                 Add to Cart
               </button>
@@ -431,15 +477,22 @@
             />
           </div>
           <div class="px-2">
-            <h3 class="font-headline-md text-body-lg text-primary mb-1">
+            <h3
+              class="font-headline-md text-body-lg text-primary mb-1"
+              data-i18n="featured.card4.name"
+            >
               Graphic Monstera
             </h3>
-            <p class="font-body-md text-label-md text-on-surface-variant mb-4">
+            <p
+              class="font-body-md text-label-md text-on-surface-variant mb-4"
+              data-i18n="featured.card4.price"
+            >
               $95.00
             </p>
             <div class="flex gap-2">
               <button
                 class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
+                data-i18n="featured.cta"
               >
                 Add to Cart
               </button>
@@ -461,11 +514,15 @@
         class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
       >
         <div class="text-center mb-20">
-          <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
+          <h2
+            class="font-headline-lg text-headline-lg text-primary mb-4"
+            data-i18n="services.title"
+          >
             Professional Services
           </h2>
           <p
             class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto"
+            data-i18n="services.subtitle"
           >
             From intimate balcony gardens to sprawling corporate headquarters,
             we design sustainable green ecosystems tailored to your
@@ -481,10 +538,16 @@
             >
               <span class="material-symbols-outlined">yard</span>
             </div>
-            <h3 class="font-headline-md text-headline-md text-primary mb-3">
+            <h3
+              class="font-headline-md text-headline-md text-primary mb-3"
+              data-i18n="services.garden.title"
+            >
               Garden Landscaping
             </h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">
+            <p
+              class="font-body-md text-body-md text-on-surface-variant"
+              data-i18n="services.garden.text"
+            >
               Residential transformations that blend organic textures with
               functional outdoor living spaces.
             </p>
@@ -497,10 +560,16 @@
             >
               <span class="material-symbols-outlined">corporate_fare</span>
             </div>
-            <h3 class="font-headline-md text-headline-md text-primary mb-3">
+            <h3
+              class="font-headline-md text-headline-md text-primary mb-3"
+              data-i18n="services.office.title"
+            >
               Office Decoration
             </h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">
+            <p
+              class="font-body-md text-body-md text-on-surface-variant"
+              data-i18n="services.office.text"
+            >
               Boosting productivity and well-being with curated low-maintenance
               biophilic office design.
             </p>
@@ -513,10 +582,16 @@
             >
               <span class="material-symbols-outlined">domain</span>
             </div>
-            <h3 class="font-headline-md text-headline-md text-primary mb-3">
+            <h3
+              class="font-headline-md text-headline-md text-primary mb-3"
+              data-i18n="services.design.title"
+            >
               Green Space Design
             </h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">
+            <p
+              class="font-body-md text-body-md text-on-surface-variant"
+              data-i18n="services.design.text"
+            >
               Full-scale architectural integration of plant life for commercial
               and residential buildings.
             </p>
@@ -529,10 +604,16 @@
             >
               <span class="material-symbols-outlined">eco</span>
             </div>
-            <h3 class="font-headline-md text-headline-md text-primary mb-3">
+            <h3
+              class="font-headline-md text-headline-md text-primary mb-3"
+              data-i18n="services.maintenance.title"
+            >
               Maintenance
             </h3>
-            <p class="font-body-md text-body-md text-on-surface-variant">
+            <p
+              class="font-body-md text-body-md text-on-surface-variant"
+              data-i18n="services.maintenance.text"
+            >
               Expert horticultural care to ensure your green investment thrives
               and matures over time.
             </p>
@@ -558,14 +639,21 @@
             class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-10"
           >
             <div class="text-white">
-              <p class="font-label-md text-label-md text-secondary-fixed mb-2">
+              <p
+                class="font-label-md text-label-md text-secondary-fixed mb-2"
+                data-i18n="portfolio.badge"
+              >
                 Portfolio Highlight
               </p>
-              <h3 class="font-headline-lg text-headline-lg mb-4">
+              <h3
+                class="font-headline-lg text-headline-lg mb-4"
+                data-i18n="portfolio.title"
+              >
                 The Zenith Tech HQ Vertical Forest
               </h3>
               <button
                 class="flex items-center gap-2 font-label-md hover:underline"
+                data-i18n="portfolio.cta"
               >
                 View Case Study
                 <span class="material-symbols-outlined text-[18px]"
@@ -579,7 +667,10 @@
         <div
           class="col-span-12 lg:col-span-4 bg-primary text-white p-10 rounded-[16px] flex flex-col justify-center"
         >
-          <h2 class="font-headline-lg text-headline-lg mb-8">
+          <h2
+            class="font-headline-lg text-headline-lg mb-8"
+            data-i18n="why.title"
+          >
             Why Fares Garden ?
           </h2>
           <ul class="space-y-6">
@@ -588,8 +679,13 @@
                 >verified</span
               >
               <div>
-                <p class="font-label-md font-bold">Professional Team</p>
-                <p class="font-body-md text-on-primary-container text-sm">
+                <p class="font-label-md font-bold" data-i18n="why.team.title">
+                  Professional Team
+                </p>
+                <p
+                  class="font-body-md text-on-primary-container text-sm"
+                  data-i18n="why.team.text"
+                >
                   Certified landscape architects &amp; horticulturists.
                 </p>
               </div>
@@ -599,8 +695,13 @@
                 >temp_preferences_custom</span
               >
               <div>
-                <p class="font-label-md font-bold">Customized Solutions</p>
-                <p class="font-body-md text-on-primary-container text-sm">
+                <p class="font-label-md font-bold" data-i18n="why.custom.title">
+                  Customized Solutions
+                </p>
+                <p
+                  class="font-body-md text-on-primary-container text-sm"
+                  data-i18n="why.custom.text"
+                >
                   Every design is unique to your space's lighting and style.
                 </p>
               </div>
@@ -610,8 +711,16 @@
                 >local_shipping</span
               >
               <div>
-                <p class="font-label-md font-bold">Fast White-Glove Delivery</p>
-                <p class="font-body-md text-on-primary-container text-sm">
+                <p
+                  class="font-label-md font-bold"
+                  data-i18n="why.delivery.title"
+                >
+                  Fast White-Glove Delivery
+                </p>
+                <p
+                  class="font-body-md text-on-primary-container text-sm"
+                  data-i18n="why.delivery.text"
+                >
                   Direct, careful transport for all specimens.
                 </p>
               </div>
@@ -676,10 +785,14 @@
             >
             <h2
               class="font-headline-lg text-[32px] md:text-headline-lg mb-6 leading-tight"
+              data-i18n="business.title"
             >
               Tailored Biophilic Solutions for Business
             </h2>
-            <p class="font-body-lg text-on-primary-container mb-10">
+            <p
+              class="font-body-lg text-on-primary-container mb-10"
+              data-i18n="business.description"
+            >
               We create productive, healthy environments through strategic plant
               placement. Our corporate packages include full design,
               installation, and ongoing maintenance.
@@ -691,8 +804,16 @@
                   >filter_vintage</span
                 >
                 <div>
-                  <h4 class="font-label-md mb-1">Green Office Concept</h4>
-                  <p class="text-sm text-on-primary-container">
+                  <h4
+                    class="font-label-md mb-1"
+                    data-i18n="business.card1.title"
+                  >
+                    Green Office Concept
+                  </h4>
+                  <p
+                    class="text-sm text-on-primary-container"
+                    data-i18n="business.card1.text"
+                  >
                     Improve air quality and acoustics with living partitions.
                   </p>
                 </div>
@@ -703,8 +824,16 @@
                   >architecture</span
                 >
                 <div>
-                  <h4 class="font-label-md mb-1">Lobby Installation</h4>
-                  <p class="text-sm text-on-primary-container">
+                  <h4
+                    class="font-label-md mb-1"
+                    data-i18n="business.card2.title"
+                  >
+                    Lobby Installation
+                  </h4>
+                  <p
+                    class="text-sm text-on-primary-container"
+                    data-i18n="business.card2.text"
+                  >
                     Make a powerful first impression with architectural
                     greenery.
                   </p>
@@ -725,7 +854,10 @@
               class="absolute -bottom-10 -left-10 bg-surface text-primary p-8 rounded-[16px] hidden md:block shadow-xl"
             >
               <p class="font-display-lg text-4xl mb-1">250+</p>
-              <p class="font-label-md text-on-surface-variant">
+              <p
+                class="font-label-md text-on-surface-variant"
+                data-i18n="business.stats"
+              >
                 Corporate Clients Trusted Us
               </p>
             </div>
@@ -737,7 +869,10 @@
     <section
       class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center"
     >
-      <h2 class="font-headline-lg text-headline-lg text-primary mb-16">
+      <h2
+        class="font-headline-lg text-headline-lg text-primary mb-16"
+        data-i18n="journey.title"
+      >
         The Fares Garden Journey
       </h2>
       <div class="relative">
@@ -754,8 +889,16 @@
             >
               <span class="material-symbols-outlined text-[32px]">chat</span>
             </div>
-            <h3 class="font-label-md text-primary mb-2">1. Consultation</h3>
-            <p class="text-xs text-on-surface-variant max-w-[160px]">
+            <h3
+              class="font-label-md text-primary mb-2"
+              data-i18n="journey.step1.title"
+            >
+              1. Consultation
+            </h3>
+            <p
+              class="text-xs text-on-surface-variant max-w-[160px]"
+              data-i18n="journey.step1.text"
+            >
               Initial meeting to understand your vision and spatial needs.
             </p>
           </div>
@@ -767,8 +910,16 @@
                 >straighten</span
               >
             </div>
-            <h3 class="font-label-md text-primary mb-2">2. Site Survey</h3>
-            <p class="text-xs text-on-surface-variant max-w-[160px]">
+            <h3
+              class="font-label-md text-primary mb-2"
+              data-i18n="journey.step2.title"
+            >
+              2. Site Survey
+            </h3>
+            <p
+              class="text-xs text-on-surface-variant max-w-[160px]"
+              data-i18n="journey.step2.text"
+            >
               Precise measurement and light assessment of your space.
             </p>
           </div>
@@ -780,8 +931,16 @@
                 >design_services</span
               >
             </div>
-            <h3 class="font-label-md text-primary mb-2">3. Design</h3>
-            <p class="text-xs text-on-surface-variant max-w-[160px]">
+            <h3
+              class="font-label-md text-primary mb-2"
+              data-i18n="journey.step3.title"
+            >
+              3. Design
+            </h3>
+            <p
+              class="text-xs text-on-surface-variant max-w-[160px]"
+              data-i18n="journey.step3.text"
+            >
               Bespoke proposal featuring curated plants and layouts.
             </p>
           </div>
@@ -793,8 +952,16 @@
                 >construction</span
               >
             </div>
-            <h3 class="font-label-md text-primary mb-2">4. Installation</h3>
-            <p class="text-xs text-on-surface-variant max-w-[160px]">
+            <h3
+              class="font-label-md text-primary mb-2"
+              data-i18n="journey.step4.title"
+            >
+              4. Installation
+            </h3>
+            <p
+              class="text-xs text-on-surface-variant max-w-[160px]"
+              data-i18n="journey.step4.text"
+            >
               Careful delivery and expert placement of your greenery.
             </p>
           </div>
@@ -806,8 +973,16 @@
                 >handyman</span
               >
             </div>
-            <h3 class="font-label-md text-primary mb-2">5. Maintenance</h3>
-            <p class="text-xs text-on-surface-variant max-w-[160px]">
+            <h3
+              class="font-label-md text-primary mb-2"
+              data-i18n="journey.step5.title"
+            >
+              5. Maintenance
+            </h3>
+            <p
+              class="text-xs text-on-surface-variant max-w-[160px]"
+              data-i18n="journey.step5.text"
+            >
               Ongoing expert care to ensure long-term health and beauty.
             </p>
           </div>
@@ -821,6 +996,7 @@
       >
         <h2
           class="font-headline-lg text-headline-lg text-primary mb-16 text-center"
+          data-i18n="testimonials.title"
         >
           Transforming Living Standards
         </h2>
@@ -854,7 +1030,10 @@
                 >star</span
               >
             </div>
-            <p class="font-body-md text-on-surface-variant mb-8 italic">
+            <p
+              class="font-body-md text-on-surface-variant mb-8 italic"
+              data-i18n="testimonials.t1.quote"
+            >
               "The team at Fares Garden transformed our sterile office into a
               vibrant sanctuary. Our employee engagement has noticeably
               increased since the installation."
@@ -866,8 +1045,16 @@
                 src="https://lh3.googleusercontent.com/aida/AP1WRLvnYAdXoLGYdbl78CD4DFChLwAC3UaGCmfdvHRBnnU-Eg9h7gDjHbMWIxkA-nOvhWUqwqu0VUNfAddEKORw2sw_qxFOwoDIaLx33lK9KIdxcecq2WbXhjekJrYf9aspCoBNYHJPvTlaQjm6iPe9tlX8cBlxCG_XxeGiYpFkXgT3iKcPhb0xWMFobhRA_ZYp080NUZqGYrGHpC9trZTZIpzWoCSTNaEVYxjjTjdsd81Oe9V2avslxL1Z9eE"
               />
               <div>
-                <p class="font-label-md text-primary">Alex Sterling</p>
-                <p class="text-xs text-on-surface-variant">
+                <p
+                  class="font-label-md text-primary"
+                  data-i18n="testimonials.t1.name"
+                >
+                  Alex Sterling
+                </p>
+                <p
+                  class="text-xs text-on-surface-variant"
+                  data-i18n="testimonials.t1.role"
+                >
                   CEO, Zenith Innovations
                 </p>
               </div>
@@ -902,7 +1089,10 @@
                 >star</span
               >
             </div>
-            <p class="font-body-md text-on-surface-variant mb-8 italic">
+            <p
+              class="font-body-md text-on-surface-variant mb-8 italic"
+              data-i18n="testimonials.t2.quote"
+            >
               "Exquisite attention to detail. Their miniature plant collection
               is unlike anything I've seen. Truly architectural pieces that
               redefined my penthouse terrace."
@@ -914,8 +1104,18 @@
                 src="https://lh3.googleusercontent.com/aida/AP1WRLvQQ9zHd18G95-aZkxQAdEG2zZK5CP-4VszVgx_YcBln1FVZMLIr7W2P3_eUdY7yf8_WRMZQj46xKwYZpCggusevrcEhI7zwK1vIqx8TTGvUVEIyl0y9pFgpzkzUIqRVQUpLWjKLfW6ri14aXilwB-BD88uTQXKde4eB6wp5XIBAd1DV1NbjdmfY_Sg8BmndrK08H9YeY4We3gSf8DBdu181r_zvLo2w8o7Et2o-NccX68_fq04qzhW4ts"
               />
               <div>
-                <p class="font-label-md text-primary">Sarah J. Miller</p>
-                <p class="text-xs text-on-surface-variant">Private Homeowner</p>
+                <p
+                  class="font-label-md text-primary"
+                  data-i18n="testimonials.t2.name"
+                >
+                  Sarah J. Miller
+                </p>
+                <p
+                  class="text-xs text-on-surface-variant"
+                  data-i18n="testimonials.t2.role"
+                >
+                  Private Homeowner
+                </p>
               </div>
             </div>
           </div>
@@ -948,7 +1148,10 @@
                 >star</span
               >
             </div>
-            <p class="font-body-md text-on-surface-variant mb-8 italic">
+            <p
+              class="font-body-md text-on-surface-variant mb-8 italic"
+              data-i18n="testimonials.t3.quote"
+            >
               "Their maintenance service is impeccable. Our building lobby has
               never looked better, and the plants have flourished remarkably
               under their care."
@@ -960,8 +1163,16 @@
                 src="https://lh3.googleusercontent.com/aida/AP1WRLtaEdpRcoVLHyZ7H9MSHk48RKebnWq3SgnmEIkJCjKcA1YB39bxf_A5FugS2R0lwIePozQOn5YLHIo3tdtAwlZ2s2dUpMOPTqQtywKEirSXjJ7uRMXgYhuorvCdpUoamCuWO--7FRlbTP-JY9DO66K-zPwLNs3MhjF6v8iOy26Cdrf9c-Nm1PizPUhcTvM-fTRTXpuSDXY1Nc8qtkVgtvNTVTtdM5YSd3k9Y7Wiio70h-FF1P9J1YRivlk"
               />
               <div>
-                <p class="font-label-md text-primary">David Chen</p>
-                <p class="text-xs text-on-surface-variant">
+                <p
+                  class="font-label-md text-primary"
+                  data-i18n="testimonials.t3.name"
+                >
+                  David Chen
+                </p>
+                <p
+                  class="text-xs text-on-surface-variant"
+                  data-i18n="testimonials.t3.role"
+                >
                   Facility Manager, Plaza 101
                 </p>
               </div>
@@ -980,16 +1191,23 @@
         <div
           class="lg:w-1/2 p-12 md:p-20 text-white flex flex-col justify-center"
         >
-          <h2 class="font-display-lg text-[32px] md:text-headline-lg mb-6">
+          <h2
+            class="font-display-lg text-[32px] md:text-headline-lg mb-6"
+            data-i18n="cta.title"
+          >
             Ready to green your space?
           </h2>
-          <p class="font-body-lg text-on-primary-container mb-10">
+          <p
+            class="font-body-lg text-on-primary-container mb-10"
+            data-i18n="cta.description"
+          >
             Get a free design consultation and site survey. Our experts will
             help you select the perfect plants for your specific environment.
           </p>
           <div class="flex flex-wrap gap-4 mb-12">
             <button
               class="bg-white text-primary px-8 py-4 rounded-full font-label-md hover:opacity-90 transition-all"
+              data-i18n="cta.button"
             >
               Get Free Consultation
             </button>
@@ -1015,10 +1233,12 @@
               <div>
                 <label
                   class="block text-label-sm font-label-sm text-primary mb-2"
+                  data-i18n="form.name"
                   >Name</label
                 >
                 <input
                   class="w-full bg-surface border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
+                  data-i18n-placeholder="form.placeholderName"
                   placeholder="John Doe"
                   type="text"
                 />
@@ -1026,17 +1246,21 @@
               <div>
                 <label
                   class="block text-label-sm font-label-sm text-primary mb-2"
+                  data-i18n="form.email"
                   >Email</label
                 >
                 <input
                   class="w-full bg-surface border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
+                  data-i18n-placeholder="form.placeholderEmail"
                   placeholder="john@example.com"
                   type="email"
                 />
               </div>
             </div>
             <div>
-              <label class="block text-label-sm font-label-sm text-primary mb-2"
+              <label
+                class="block text-label-sm font-label-sm text-primary mb-2"
+                data-i18n="form.service"
                 >Service Type</label
               >
               <select
@@ -1049,11 +1273,14 @@
               </select>
             </div>
             <div>
-              <label class="block text-label-sm font-label-sm text-primary mb-2"
+              <label
+                class="block text-label-sm font-label-sm text-primary mb-2"
+                data-i18n="form.message"
                 >Message</label
               >
               <textarea
                 class="w-full bg-surface border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
+                data-i18n-placeholder="form.placeholderMessage"
                 placeholder="Tell us about your space..."
                 rows="4"
               ></textarea>
@@ -1061,6 +1288,7 @@
             <button
               class="w-full bg-primary text-white py-4 rounded-full font-label-md shadow-lg hover:opacity-95 transition-all"
               type="submit"
+              data-i18n="form.submit"
             >
               Send Request
             </button>
@@ -1077,7 +1305,10 @@
           <div class="font-headline-md text-headline-md text-primary mb-6">
             Fares Garden
           </div>
-          <p class="font-body-md text-on-surface-variant mb-6">
+          <p
+            class="font-body-md text-on-surface-variant mb-6"
+            data-i18n="footer.brand"
+          >
             Crafting organic sanctuaries for modern life through architectural
             plant design.
           </p>
@@ -1100,75 +1331,126 @@
           </div>
         </div>
         <div>
-          <h4 class="font-label-md text-primary mb-6">Services</h4>
+          <h4
+            class="font-label-md text-primary mb-6"
+            data-i18n="footer.services"
+          >
+            Services
+          </h4>
           <ul class="space-y-4 font-body-md text-on-surface-variant">
             <li>
-              <a class="hover:text-primary transition-colors" href="#"
+              <a
+                class="hover:text-primary transition-colors"
+                href="#"
+                data-i18n="footer.residential"
                 >Residential Landscaping</a
               >
             </li>
             <li>
-              <a class="hover:text-primary transition-colors" href="#"
+              <a
+                class="hover:text-primary transition-colors"
+                href="#"
+                data-i18n="footer.office"
                 >Office Greenery</a
               >
             </li>
             <li>
-              <a class="hover:text-primary transition-colors" href="#"
+              <a
+                class="hover:text-primary transition-colors"
+                href="#"
+                data-i18n="footer.rental"
                 >Plant Rental</a
               >
             </li>
             <li>
-              <a class="hover:text-primary transition-colors" href="#"
+              <a
+                class="hover:text-primary transition-colors"
+                href="#"
+                data-i18n="footer.consultation"
                 >Consultation</a
               >
             </li>
           </ul>
         </div>
         <div>
-          <h4 class="font-label-md text-primary mb-6">Company</h4>
+          <h4
+            class="font-label-md text-primary mb-6"
+            data-i18n="footer.company"
+          >
+            Company
+          </h4>
           <ul class="space-y-4 font-body-md text-on-surface-variant">
             <li>
-              <a class="hover:text-primary transition-colors" href="#"
+              <a
+                class="hover:text-primary transition-colors"
+                href="#"
+                data-i18n="footer.portfolio"
                 >Our Portfolio</a
               >
             </li>
             <li>
-              <a class="hover:text-primary transition-colors" href="#"
+              <a
+                class="hover:text-primary transition-colors"
+                href="#"
+                data-i18n="footer.guides"
                 >Care Guides</a
               >
             </li>
             <li>
-              <a class="hover:text-primary transition-colors" href="#"
+              <a
+                class="hover:text-primary transition-colors"
+                href="#"
+                data-i18n="footer.about"
                 >About Us</a
               >
             </li>
             <li>
-              <a class="hover:text-primary transition-colors" href="#"
+              <a
+                class="hover:text-primary transition-colors"
+                href="#"
+                data-i18n="footer.careers"
                 >Careers</a
               >
             </li>
           </ul>
         </div>
         <div>
-          <h4 class="font-label-md text-primary mb-6">Support</h4>
+          <h4
+            class="font-label-md text-primary mb-6"
+            data-i18n="footer.support"
+          >
+            Support
+          </h4>
           <ul class="space-y-4 font-body-md text-on-surface-variant">
             <li>
-              <a class="hover:text-primary transition-colors" href="#"
+              <a
+                class="hover:text-primary transition-colors"
+                href="#"
+                data-i18n="footer.privacy"
                 >Privacy Policy</a
               >
             </li>
             <li>
-              <a class="hover:text-primary transition-colors" href="#"
+              <a
+                class="hover:text-primary transition-colors"
+                href="#"
+                data-i18n="footer.terms"
                 >Terms of Service</a
               >
             </li>
             <li>
-              <a class="hover:text-primary transition-colors" href="#"
+              <a
+                class="hover:text-primary transition-colors"
+                href="#"
+                data-i18n="footer.shipping"
                 >Shipping</a
               >
             </li>
             <li>
-              <a class="hover:text-primary transition-colors" href="#"
+              <a
+                class="hover:text-primary transition-colors"
+                href="#"
+                data-i18n="footer.contact"
                 >Contact</a
               >
             </li>
@@ -1178,7 +1460,10 @@
       <div
         class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-outline-variant text-center md:text-left"
       >
-        <p class="font-body-md text-on-surface-variant text-sm">
+        <p
+          class="font-body-md text-on-surface-variant text-sm"
+          data-i18n="footer.copyright"
+        >
           © 2026 Fares Garden Linear Ornamental. All rights reserved.
         </p>
       </div>
@@ -1190,10 +1475,66 @@
       <span class="material-symbols-outlined text-[28px]">calendar_month</span>
       <span
         class="absolute right-20 bg-primary px-4 py-2 rounded-lg text-white text-sm font-label-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+        data-i18n="fab.label"
         >Book Consultation</span
       >
     </button>
     <script>
+      const langToggle = document.getElementById("langToggle");
+
+      async function loadLocale(lang) {
+        const response = await fetch(`./locales/${lang}.json`);
+        if (!response.ok) throw new Error("Failed to load locale");
+        return response.json();
+      }
+
+      function applyTranslations(locale, lang) {
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          if (locale[key]) {
+            element.textContent = locale[key];
+          }
+        });
+
+        document
+          .querySelectorAll("[data-i18n-placeholder]")
+          .forEach((element) => {
+            const key = element.getAttribute("data-i18n-placeholder");
+            if (locale[key]) {
+              element.placeholder = locale[key];
+            }
+          });
+
+        if (langToggle) {
+          langToggle.textContent = lang === "en" ? "VI" : "EN";
+        }
+      }
+
+      async function setLanguage(lang) {
+        try {
+          const locale = await loadLocale(lang);
+          applyTranslations(locale, lang);
+          localStorage.setItem("preferredLanguage", lang);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      if (langToggle) {
+        langToggle.addEventListener("click", async () => {
+          const currentLang = localStorage.getItem("preferredLanguage") || "en";
+          await setLanguage(currentLang === "en" ? "vi" : "en");
+        });
+      }
+
+      (async () => {
+        const preferredLanguage =
+          localStorage.getItem("preferredLanguage") || "en";
+        await setLanguage(preferredLanguage);
+      })();
+
       // Simple scroll behavior for navbar
       window.addEventListener("scroll", () => {
         const nav = document.querySelector("nav");
