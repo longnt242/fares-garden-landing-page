@@ -158,27 +158,28 @@
         >
           Fares Garden
         </div>
-        <div class="hidden md:flex items-center gap-8">
+        <div class="top-nav-menu hidden md:flex items-center gap-8">
           <a
-            class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1"
-            href="#"
+            class="top-nav-link is-active font-body-md text-body-md"
+            href="#portfolio"
             >Portfolio</a
           >
           <a
-            class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-            href="#"
+            class="top-nav-link font-body-md text-body-md"
+            href="#services"
             >Services</a
           >
           <a
-            class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-            href="#"
+            class="top-nav-link font-body-md text-body-md"
+            href="#plants"
             >Plants</a
           >
           <a
-            class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-            href="#"
+            class="top-nav-link font-body-md text-body-md"
+            href="#about"
             >About</a
           >
+          <span class="top-nav-indicator" aria-hidden="true"></span>
         </div>
         <div class="flex items-center gap-2 md:gap-4">
           <a
@@ -209,7 +210,7 @@
           src="../asset/images/main-banner.jpg"
         />
         <div
-          class="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent"
+          class="absolute inset-0 bg-gradient-to-r from-surface/75 via-surface/20 to-transparent"
         ></div>
       </div>
       <div
@@ -221,7 +222,7 @@
             >Ornamental Perfection</span
           >
           <h1
-            class="font-display-lg text-[44px] md:text-display-lg leading-tight text-primary mb-6"
+            class="hero-title font-display-lg text-[44px] md:text-display-lg leading-tight text-primary mb-6"
           >
             Bring Nature Into <br /><span
               class="text-secondary italic font-medium"
@@ -252,7 +253,8 @@
     </header>
     <!-- Featured Plant Collection -->
     <section
-      class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
+      id="plants"
+      class="scroll-mt-24 py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
     >
       <div
         class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
@@ -267,8 +269,10 @@
           </p>
         </div>
         <a
-          class="font-label-md text-label-md text-primary flex items-center gap-2 group transition-all"
-          href="#"
+          class="view-all-plants-trigger font-label-md text-label-md text-primary flex items-center gap-2 group transition-all"
+          href="#plant-showcase"
+          aria-controls="plant-showcase"
+          aria-expanded="false"
         >
           View All Plants
           <span
@@ -277,16 +281,18 @@
           >
         </a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+      <div
+        class="featured-plants-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter"
+      >
         <!-- Plant Card 1 -->
         <div
           class="group bg-surface-container-low p-4 rounded-[16px] transition-all hover:shadow-[0px_10px_30px_rgba(40,72,72,0.05)]"
         >
           <div
-            class="relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
+            class="plant-image-frame relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
           >
             <img
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="plant-image w-full h-full object-cover"
               data-alt="A high-end close-up photograph of a Sansevieria Masoniana in a sleek matte charcoal ceramic pot. The lighting is soft and directional, highlighting the vibrant green texture of the broad leaves. Set against a clean, off-white minimalist background that reflects a premium, Apple-like product photography style with a focus on organic details and architectural form."
               src="../asset/images/product-1.jpg"
             />
@@ -304,19 +310,15 @@
             <p class="font-body-md text-label-md text-on-surface-variant mb-4">
               $85.00
             </p>
-            <div class="flex gap-2">
-              <button
-                class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-secondary px-3 py-1 text-label-sm font-label-sm text-white"
+                >Indoor Display</span
               >
-                Add to Cart
-              </button>
-              <button
-                class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container transition-all"
+              <span
+                class="rounded-full border border-outline-variant px-3 py-1 text-label-sm font-label-sm text-on-surface-variant"
+                >Low Care</span
               >
-                <span class="material-symbols-outlined text-[20px]"
-                  >visibility</span
-                >
-              </button>
             </div>
           </div>
         </div>
@@ -325,10 +327,10 @@
           class="group bg-surface-container-low p-4 rounded-[16px] transition-all hover:shadow-[0px_10px_30px_rgba(40,72,72,0.05)]"
         >
           <div
-            class="relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
+            class="plant-image-frame relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
           >
             <img
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="plant-image w-full h-full object-cover"
               data-alt="A portrait of a minimalist Fiddle Leaf Fig tree in a designer wooden planter. The plant's large, glossy dark green leaves contrast beautifully with a bright, sun-drenched modern living room corner. The image emphasizes high-key lighting, clean lines, and a sense of sophisticated natural luxury, perfectly aligning with a premium landscaping brand aesthetic."
               src="../asset/images/product-2.jpg"
             />
@@ -346,19 +348,15 @@
             <p class="font-body-md text-label-md text-on-surface-variant mb-4">
               $120.00
             </p>
-            <div class="flex gap-2">
-              <button
-                class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-secondary px-3 py-1 text-label-sm font-label-sm text-white"
+                >Statement Plant</span
               >
-                Add to Cart
-              </button>
-              <button
-                class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container transition-all"
+              <span
+                class="rounded-full border border-outline-variant px-3 py-1 text-label-sm font-label-sm text-on-surface-variant"
+                >Bright Spaces</span
               >
-                <span class="material-symbols-outlined text-[20px]"
-                  >visibility</span
-                >
-              </button>
             </div>
           </div>
         </div>
@@ -367,10 +365,10 @@
           class="group bg-surface-container-low p-4 rounded-[16px] transition-all hover:shadow-[0px_10px_30px_rgba(40,72,72,0.05)]"
         >
           <div
-            class="relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
+            class="plant-image-frame relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
           >
             <img
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="plant-image w-full h-full object-cover"
               data-alt="Close up of a miniature ornamental succulent arrangement in a shallow stone bowl. The variety of textures from smooth Echeveria to spiked Haworthia creates a tactile and complex composition. The lighting is soft and cinematic, highlighting the powdery blue and sage green hues of the plants against a neutral light-gray background."
               src="../asset/images/product-3.jpg"
             />
@@ -382,19 +380,15 @@
             <p class="font-body-md text-label-md text-on-surface-variant mb-4">
               $65.00
             </p>
-            <div class="flex gap-2">
-              <button
-                class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-secondary px-3 py-1 text-label-sm font-label-sm text-white"
+                >Mini Collection</span
               >
-                Add to Cart
-              </button>
-              <button
-                class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container transition-all"
+              <span
+                class="rounded-full border border-outline-variant px-3 py-1 text-label-sm font-label-sm text-on-surface-variant"
+                >Dry Climate</span
               >
-                <span class="material-symbols-outlined text-[20px]"
-                  >visibility</span
-                >
-              </button>
             </div>
           </div>
         </div>
@@ -402,10 +396,10 @@
           class="group bg-surface-container-low p-4 rounded-[16px] transition-all hover:shadow-[0px_10px_30px_rgba(40,72,72,0.05)]"
         >
           <div
-            class="relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
+            class="plant-image-frame relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
           >
             <img
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="plant-image w-full h-full object-cover"
               data-alt="An elegant Monstera Deliciosa leaf detail showing its iconic splits. The leaf is perfectly green and healthy, illuminated by soft side-lighting that creates gentle shadows. The presentation is elevated, focusing on the graphic quality of the plant as an architectural element in a high-end interior design context."
               src="../asset/images/product-4.jpg"
             />
@@ -417,26 +411,175 @@
             <p class="font-body-md text-label-md text-on-surface-variant mb-4">
               $95.00
             </p>
-            <div class="flex gap-2">
-              <button
-                class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-secondary px-3 py-1 text-label-sm font-label-sm text-white"
+                >Leaf Feature</span
               >
-                Add to Cart
-              </button>
-              <button
-                class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container transition-all"
+              <span
+                class="rounded-full border border-outline-variant px-3 py-1 text-label-sm font-label-sm text-on-surface-variant"
+                >Interior Accent</span
               >
-                <span class="material-symbols-outlined text-[20px]"
-                  >visibility</span
-                >
-              </button>
             </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="plant-showcase"
+        class="plant-showcase mt-12"
+        aria-hidden="true"
+      >
+        <div class="plant-showcase-hero">
+          <img
+            class="plant-showcase-image"
+            src="../asset/images/product-1.jpg"
+            alt="Architectural Fern"
+          />
+          <div class="plant-showcase-content">
+            <p class="plant-showcase-price font-label-md text-secondary-fixed mb-3">
+              $85.00
+            </p>
+            <h3 class="plant-showcase-name font-display-lg text-[36px] md:text-display-lg leading-tight mb-4">
+              Architectural Fern
+            </h3>
+            <p class="plant-showcase-size font-body-lg text-on-primary-container">
+              Size: 35-45cm tall, compact tabletop form
+            </p>
+          </div>
+          <button
+            class="plant-showcase-nav plant-showcase-prev"
+            type="button"
+            aria-label="Previous plants"
+          >
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button
+            class="plant-showcase-nav plant-showcase-next"
+            type="button"
+            aria-label="Next plants"
+          >
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+          <div class="plant-showcase-thumbs">
+            <button
+              class="plant-showcase-thumb is-active rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-1.jpg"
+              data-name="Architectural Fern"
+              data-price="$85.00"
+              data-size="Size: 35-45cm tall, compact tabletop form"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-1.jpg" alt="Architectural Fern" />
+              <span class="font-label-md text-[11px] leading-tight">Architectural Fern</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-2.jpg"
+              data-name="Fares Garden Fig Var."
+              data-price="$120.00"
+              data-size="Size: 120-160cm tall, sculptural floor plant"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-2.jpg" alt="Fares Garden Fig Var." />
+              <span class="font-label-md text-[11px] leading-tight">Fares Garden Fig Var.</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-3.jpg"
+              data-name="Desert Harmony"
+              data-price="$65.00"
+              data-size="Size: 18-25cm wide, shallow bowl arrangement"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-3.jpg" alt="Desert Harmony" />
+              <span class="font-label-md text-[11px] leading-tight">Desert Harmony</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-4.jpg"
+              data-name="Graphic Monstera"
+              data-price="$95.00"
+              data-size="Size: 60-90cm tall, bold leaf accent"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-4.jpg" alt="Graphic Monstera" />
+              <span class="font-label-md text-[11px] leading-tight">Graphic Monstera</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-5.jpg"
+              data-name="Calm Desk Bonsai"
+              data-price="$78.00"
+              data-size="Size: 28-38cm tall, refined desk silhouette"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-5.jpg" alt="Calm Desk Bonsai" />
+              <span class="font-label-md text-[11px] leading-tight">Calm Desk Bonsai</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-1.jpg"
+              data-name="Emerald Shelf Fern"
+              data-price="$72.00"
+              data-size="Size: 30-42cm tall, layered shelf greenery"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-1.jpg" alt="Emerald Shelf Fern" />
+              <span class="font-label-md text-[11px] leading-tight">Emerald Shelf Fern</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-2.jpg"
+              data-name="Lobby Fig Form"
+              data-price="$135.00"
+              data-size="Size: 140-180cm tall, premium lobby statement"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-2.jpg" alt="Lobby Fig Form" />
+              <span class="font-label-md text-[11px] leading-tight">Lobby Fig Form</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-3.jpg"
+              data-name="Stone Bowl Succulent"
+              data-price="$58.00"
+              data-size="Size: 16-22cm wide, compact stone bowl planting"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-3.jpg" alt="Stone Bowl Succulent" />
+              <span class="font-label-md text-[11px] leading-tight">Stone Bowl Succulent</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-4.jpg"
+              data-name="Split Leaf Accent"
+              data-price="$105.00"
+              data-size="Size: 70-100cm tall, dramatic split-leaf profile"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-4.jpg" alt="Split Leaf Accent" />
+              <span class="font-label-md text-[11px] leading-tight">Split Leaf Accent</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-5.jpg"
+              data-name="Studio Green Mini"
+              data-price="$69.00"
+              data-size="Size: 24-32cm tall, small studio-friendly plant"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-5.jpg" alt="Studio Green Mini" />
+              <span class="font-label-md text-[11px] leading-tight">Studio Green Mini</span>
+            </button>
           </div>
         </div>
       </div>
     </section>
     <!-- Services Section -->
-    <section class="py-section-gap bg-surface-container">
+    <section
+      id="services"
+      class="scroll-mt-24 py-section-gap bg-surface-container"
+    >
       <div
         class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
       >
@@ -522,7 +665,8 @@
     </section>
     <!-- Why Choose Us & Portfolio Showcase (Bento Style) -->
     <section
-      class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
+      id="portfolio"
+      class="scroll-mt-24 py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
     >
       <div class="bento-grid">
         <!-- Hero Portfolio -->
@@ -715,7 +859,8 @@
     </section>
     <!-- Process Section -->
     <section
-      class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center"
+      id="about"
+      class="scroll-mt-24 py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center"
     >
       <h2 class="font-headline-lg text-headline-lg text-primary mb-16">
         The Fares Garden Journey

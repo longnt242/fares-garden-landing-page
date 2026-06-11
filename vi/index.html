@@ -158,27 +158,28 @@
         >
           Fares Garden
         </div>
-        <div class="hidden md:flex items-center gap-8">
+        <div class="top-nav-menu hidden md:flex items-center gap-8">
           <a
-            class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1"
-            href="#"
+            class="top-nav-link is-active font-body-md text-body-md"
+            href="#portfolio"
             >Dự án</a
           >
           <a
-            class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-            href="#"
+            class="top-nav-link font-body-md text-body-md"
+            href="#services"
             >Dịch vụ</a
           >
           <a
-            class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-            href="#"
+            class="top-nav-link font-body-md text-body-md"
+            href="#plants"
             >Cây cảnh</a
           >
           <a
-            class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
-            href="#"
+            class="top-nav-link font-body-md text-body-md"
+            href="#about"
             >Giới thiệu</a
           >
+          <span class="top-nav-indicator" aria-hidden="true"></span>
         </div>
         <div class="flex items-center gap-2 md:gap-4">
           <a
@@ -209,7 +210,7 @@
           src="../asset/images/main-banner.jpg"
         />
         <div
-          class="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent"
+          class="absolute inset-0 bg-gradient-to-r from-surface/75 via-surface/20 to-transparent"
         ></div>
       </div>
       <div
@@ -221,7 +222,7 @@
             >Sự hoàn hảo trong từng chi tiết</span
           >
           <h1
-            class="font-display-lg text-[44px] md:text-display-lg leading-tight text-primary mb-6"
+            class="hero-title font-display-lg text-[44px] md:text-display-lg leading-tight text-primary mb-6"
           >
             Mang thiên nhiên vào <br /><span
               class="text-secondary italic font-medium"
@@ -252,7 +253,8 @@
     </header>
     <!-- Featured Plant Collection -->
     <section
-      class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
+      id="plants"
+      class="scroll-mt-24 py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
     >
       <div
         class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
@@ -267,8 +269,10 @@
           </p>
         </div>
         <a
-          class="font-label-md text-label-md text-primary flex items-center gap-2 group transition-all"
-          href="#"
+          class="view-all-plants-trigger font-label-md text-label-md text-primary flex items-center gap-2 group transition-all"
+          href="#plant-showcase"
+          aria-controls="plant-showcase"
+          aria-expanded="false"
         >
           Xem tất cả cây cảnh
           <span
@@ -277,16 +281,18 @@
           >
         </a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+      <div
+        class="featured-plants-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter"
+      >
         <!-- Plant Card 1 -->
         <div
           class="group bg-surface-container-low p-4 rounded-[16px] transition-all hover:shadow-[0px_10px_30px_rgba(40,72,72,0.05)]"
         >
           <div
-            class="relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
+            class="plant-image-frame relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
           >
             <img
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="plant-image w-full h-full object-cover"
               data-alt="A high-end close-up photograph of a Sansevieria Masoniana in a sleek matte charcoal ceramic pot. The lighting is soft and directional, highlighting the vibrant green texture of the broad leaves. Set against a clean, off-white minimalist background that reflects a premium, Apple-like product photography style with a focus on organic details and architectural form."
               src="../asset/images/product-1.jpg"
             />
@@ -304,19 +310,15 @@
             <p class="font-body-md text-label-md text-on-surface-variant mb-4">
               $85.00
             </p>
-            <div class="flex gap-2">
-              <button
-                class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-secondary px-3 py-1 text-label-sm font-label-sm text-white"
+                >Trang trí trong nhà</span
               >
-                Thêm vào giỏ
-              </button>
-              <button
-                class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container transition-all"
+              <span
+                class="rounded-full border border-outline-variant px-3 py-1 text-label-sm font-label-sm text-on-surface-variant"
+                >Dễ chăm sóc</span
               >
-                <span class="material-symbols-outlined text-[20px]"
-                  >visibility</span
-                >
-              </button>
             </div>
           </div>
         </div>
@@ -325,10 +327,10 @@
           class="group bg-surface-container-low p-4 rounded-[16px] transition-all hover:shadow-[0px_10px_30px_rgba(40,72,72,0.05)]"
         >
           <div
-            class="relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
+            class="plant-image-frame relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
           >
             <img
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="plant-image w-full h-full object-cover"
               data-alt="A portrait of a minimalist Fiddle Leaf Fig tree in a designer wooden planter. The plant's large, glossy dark green leaves contrast beautifully with a bright, sun-drenched modern living room corner. The image emphasizes high-key lighting, clean lines, and a sense of sophisticated natural luxury, perfectly aligning with a premium landscaping brand aesthetic."
               src="../asset/images/product-2.jpg"
             />
@@ -346,19 +348,15 @@
             <p class="font-body-md text-label-md text-on-surface-variant mb-4">
               $120.00
             </p>
-            <div class="flex gap-2">
-              <button
-                class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-secondary px-3 py-1 text-label-sm font-label-sm text-white"
+                >Cây điểm nhấn</span
               >
-                Thêm vào giỏ
-              </button>
-              <button
-                class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container transition-all"
+              <span
+                class="rounded-full border border-outline-variant px-3 py-1 text-label-sm font-label-sm text-on-surface-variant"
+                >Không gian sáng</span
               >
-                <span class="material-symbols-outlined text-[20px]"
-                  >visibility</span
-                >
-              </button>
             </div>
           </div>
         </div>
@@ -367,10 +365,10 @@
           class="group bg-surface-container-low p-4 rounded-[16px] transition-all hover:shadow-[0px_10px_30px_rgba(40,72,72,0.05)]"
         >
           <div
-            class="relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
+            class="plant-image-frame relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
           >
             <img
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="plant-image w-full h-full object-cover"
               data-alt="Close up of a miniature ornamental succulent arrangement in a shallow stone bowl. The variety of textures from smooth Echeveria to spiked Haworthia creates a tactile and complex composition. The lighting is soft and cinematic, highlighting the powdery blue and sage green hues of the plants against a neutral light-gray background."
               src="../asset/images/product-3.jpg"
             />
@@ -382,19 +380,15 @@
             <p class="font-body-md text-label-md text-on-surface-variant mb-4">
               $65.00
             </p>
-            <div class="flex gap-2">
-              <button
-                class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-secondary px-3 py-1 text-label-sm font-label-sm text-white"
+                >Bộ sưu tập mini</span
               >
-                Thêm vào giỏ
-              </button>
-              <button
-                class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container transition-all"
+              <span
+                class="rounded-full border border-outline-variant px-3 py-1 text-label-sm font-label-sm text-on-surface-variant"
+                >Khí hậu khô</span
               >
-                <span class="material-symbols-outlined text-[20px]"
-                  >visibility</span
-                >
-              </button>
             </div>
           </div>
         </div>
@@ -402,10 +396,10 @@
           class="group bg-surface-container-low p-4 rounded-[16px] transition-all hover:shadow-[0px_10px_30px_rgba(40,72,72,0.05)]"
         >
           <div
-            class="relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
+            class="plant-image-frame relative aspect-[4/5] overflow-hidden rounded-[12px] mb-6"
           >
             <img
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="plant-image w-full h-full object-cover"
               data-alt="An elegant Monstera Deliciosa leaf detail showing its iconic splits. The leaf is perfectly green and healthy, illuminated by soft side-lighting that creates gentle shadows. The presentation is elevated, focusing on the graphic quality of the plant as an architectural element in a high-end interior design context."
               src="../asset/images/product-4.jpg"
             />
@@ -417,26 +411,175 @@
             <p class="font-body-md text-label-md text-on-surface-variant mb-4">
               $95.00
             </p>
-            <div class="flex gap-2">
-              <button
-                class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="rounded-full bg-secondary px-3 py-1 text-label-sm font-label-sm text-white"
+                >Điểm nhấn lá</span
               >
-                Thêm vào giỏ
-              </button>
-              <button
-                class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container transition-all"
+              <span
+                class="rounded-full border border-outline-variant px-3 py-1 text-label-sm font-label-sm text-on-surface-variant"
+                >Trang trí nội thất</span
               >
-                <span class="material-symbols-outlined text-[20px]"
-                  >visibility</span
-                >
-              </button>
             </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="plant-showcase"
+        class="plant-showcase mt-12"
+        aria-hidden="true"
+      >
+        <div class="plant-showcase-hero">
+          <img
+            class="plant-showcase-image"
+            src="../asset/images/product-1.jpg"
+            alt="Dương xỉ kiến trúc"
+          />
+          <div class="plant-showcase-content">
+            <p class="plant-showcase-price font-label-md text-secondary-fixed mb-3">
+              $85.00
+            </p>
+            <h3 class="plant-showcase-name font-display-lg text-[36px] md:text-display-lg leading-tight mb-4">
+              Dương xỉ kiến trúc
+            </h3>
+            <p class="plant-showcase-size font-body-lg text-on-primary-container">
+              Kích thước: cao 35-45cm, dáng nhỏ gọn để bàn
+            </p>
+          </div>
+          <button
+            class="plant-showcase-nav plant-showcase-prev"
+            type="button"
+            aria-label="Cây trước"
+          >
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button
+            class="plant-showcase-nav plant-showcase-next"
+            type="button"
+            aria-label="Cây tiếp theo"
+          >
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+          <div class="plant-showcase-thumbs">
+            <button
+              class="plant-showcase-thumb is-active rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-1.jpg"
+              data-name="Dương xỉ kiến trúc"
+              data-price="$85.00"
+              data-size="Kích thước: cao 35-45cm, dáng nhỏ gọn để bàn"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-1.jpg" alt="Dương xỉ kiến trúc" />
+              <span class="font-label-md text-[11px] leading-tight">Dương xỉ kiến trúc</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-2.jpg"
+              data-name="Cây fig Fares Garden"
+              data-price="$120.00"
+              data-size="Kích thước: cao 120-160cm, cây đặt sàn tạo điểm nhấn"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-2.jpg" alt="Cây fig Fares Garden" />
+              <span class="font-label-md text-[11px] leading-tight">Cây fig Fares Garden</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-3.jpg"
+              data-name="Hòa điệu sa mạc"
+              data-price="$65.00"
+              data-size="Kích thước: rộng 18-25cm, bố cục chậu nông"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-3.jpg" alt="Hòa điệu sa mạc" />
+              <span class="font-label-md text-[11px] leading-tight">Hòa điệu sa mạc</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-4.jpg"
+              data-name="Monstera nghệ thuật"
+              data-price="$95.00"
+              data-size="Kích thước: cao 60-90cm, lá lớn tạo điểm nhấn"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-4.jpg" alt="Monstera nghệ thuật" />
+              <span class="font-label-md text-[11px] leading-tight">Monstera nghệ thuật</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-5.jpg"
+              data-name="Bonsai bàn làm việc"
+              data-price="$78.00"
+              data-size="Kích thước: cao 28-38cm, dáng tinh gọn cho bàn làm việc"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-5.jpg" alt="Bonsai bàn làm việc" />
+              <span class="font-label-md text-[11px] leading-tight">Bonsai bàn làm việc</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-1.jpg"
+              data-name="Dương xỉ kệ xanh"
+              data-price="$72.00"
+              data-size="Kích thước: cao 30-42cm, dáng tầng cho kệ trang trí"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-1.jpg" alt="Dương xỉ kệ xanh" />
+              <span class="font-label-md text-[11px] leading-tight">Dương xỉ kệ xanh</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-2.jpg"
+              data-name="Cây fig sảnh lớn"
+              data-price="$135.00"
+              data-size="Kích thước: cao 140-180cm, cây điểm nhấn cho sảnh"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-2.jpg" alt="Cây fig sảnh lớn" />
+              <span class="font-label-md text-[11px] leading-tight">Cây fig sảnh lớn</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-3.jpg"
+              data-name="Sen đá chậu đá"
+              data-price="$58.00"
+              data-size="Kích thước: rộng 16-22cm, bố cục chậu đá nhỏ"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-3.jpg" alt="Sen đá chậu đá" />
+              <span class="font-label-md text-[11px] leading-tight">Sen đá chậu đá</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-4.jpg"
+              data-name="Monstera lá xẻ"
+              data-price="$105.00"
+              data-size="Kích thước: cao 70-100cm, dáng lá xẻ nổi bật"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-4.jpg" alt="Monstera lá xẻ" />
+              <span class="font-label-md text-[11px] leading-tight">Monstera lá xẻ</span>
+            </button>
+            <button
+              class="plant-showcase-thumb rounded-[10px] p-1.5 text-left"
+              data-img="../asset/images/product-5.jpg"
+              data-name="Cây mini studio"
+              data-price="$69.00"
+              data-size="Kích thước: cao 24-32cm, phù hợp góc studio nhỏ"
+              type="button"
+            >
+              <img class="mb-1.5 w-full rounded-md" src="../asset/images/product-5.jpg" alt="Cây mini studio" />
+              <span class="font-label-md text-[11px] leading-tight">Cây mini studio</span>
+            </button>
           </div>
         </div>
       </div>
     </section>
     <!-- Services Section -->
-    <section class="py-section-gap bg-surface-container">
+    <section
+      id="services"
+      class="scroll-mt-24 py-section-gap bg-surface-container"
+    >
       <div
         class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
       >
@@ -522,7 +665,8 @@
     </section>
     <!-- Why Choose Us & Portfolio Showcase (Bento Style) -->
     <section
-      class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
+      id="portfolio"
+      class="scroll-mt-24 py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
     >
       <div class="bento-grid">
         <!-- Hero Portfolio -->
@@ -718,7 +862,8 @@
     </section>
     <!-- Process Section -->
     <section
-      class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center"
+      id="about"
+      class="scroll-mt-24 py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center"
     >
       <h2 class="font-headline-lg text-headline-lg text-primary mb-16">
         Hành trình Fares Garden
