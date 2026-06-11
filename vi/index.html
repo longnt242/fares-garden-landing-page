@@ -1,12 +1,14 @@
 <!doctype html>
 
-<html class="scroll-smooth" lang="en">
+<html class="scroll-smooth" lang="vi">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>
-      Fares Garden | Ornamental Plants &amp; Professional Landscaping
+      Fares Garden | Cây cảnh &amp; Thiết kế cảnh quan chuyên nghiệp
     </title>
+    <link rel="alternate" hreflang="vi" href="https://domain.com/vi/" />
+    <link rel="alternate" hreflang="en" href="https://domain.com/en/" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap"
@@ -20,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../css/style.css" />
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -139,35 +142,6 @@
         },
       };
     </script>
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
-      h1,
-      h2,
-      h3,
-      .headline {
-        font-family: "Manrope", sans-serif;
-      }
-      .material-symbols-outlined {
-        font-variation-settings:
-          "FILL" 0,
-          "wght" 400,
-          "GRAD" 0,
-          "opsz" 24;
-        display: inline-block;
-        vertical-align: middle;
-      }
-      .bento-grid {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 24px;
-      }
-      .consultation-fab {
-        box-shadow: 0px 10px 30px rgba(40, 72, 72, 0.15);
-        background-color: #a68a64; /* Wood Accent from guidance */
-      }
-    </style>
   </head>
   <body
     class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed"
@@ -188,34 +162,40 @@
           <a
             class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1"
             href="#"
-            >Portfolio</a
+            >Dự án</a
           >
           <a
             class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
             href="#"
-            >Services</a
+            >Dịch vụ</a
           >
           <a
             class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
             href="#"
-            >Plants</a
+            >Cây cảnh</a
           >
           <a
             class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors"
             href="#"
-            >About</a
+            >Giới thiệu</a
           >
         </div>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2 md:gap-4">
+          <a
+            href="../en/index.html"
+            class="font-label-md text-label-md px-4 py-2 rounded-full border border-primary/30 text-primary hover:bg-primary/5 transition-all"
+          >
+            EN
+          </a>
           <button
             class="hidden md:block font-label-md text-label-md px-6 py-2.5 rounded-full border-[1.5px] border-primary text-primary hover:bg-primary/5 transition-all"
           >
-            Shop
+            Mua cây
           </button>
           <button
             class="font-label-md text-label-md px-6 py-2.5 rounded-full bg-primary text-white shadow-[0px_10px_30px_rgba(40,72,72,0.05)] hover:opacity-90 transition-all active:scale-95"
           >
-            Consultation
+            Tư vấn
           </button>
         </div>
       </div>
@@ -226,7 +206,7 @@
         <img
           class="w-full h-full object-cover"
           data-alt="A breathtaking, wide-angle cinematic shot of a modern minimalist interior featuring an architectural indoor garden. Fares Garden green ferns and architectural structural plants are bathed in soft, natural morning sunlight streaming through large floor-to-ceiling windows. The aesthetic is clean, professional, and tranquil, utilizing a palette of deep forest greens, crisp whites, and soft light-mode grays to create a premium landscaping atmosphere."
-          src="https://lh3.googleusercontent.com/aida/AP1WRLuBVcC3IgdstQmNoep5IIydx7hlJ5rNfT2rt8i5lJPYpBe3jLC7aAJHcIlFEqZxfya-7M4SyMV69YFx0RfobYuWTfIDP1dofkJU53xW2JiVx5POoyAIJu5tbNVnGBgPuDpmEbvKMEFL0jZ1ZbiVBkD1XTKfE74FppU1SidH1Kaf-pVm7Y99ESOMe_jacuQ39SF91V2ktfmFfMakpLe4zsakR_LX4Zfump2-WOpE7NYJVrFDlKtueaO0zQ"
+          src="../asset/images/main-banner.jpg"
         />
         <div
           class="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent"
@@ -238,33 +218,33 @@
         <div class="max-w-2xl">
           <span
             class="inline-block font-label-md text-label-md text-secondary tracking-widest uppercase mb-4"
-            >Ornamental Perfection</span
+            >Sự hoàn hảo trong từng chi tiết</span
           >
           <h1
             class="font-display-lg text-[44px] md:text-display-lg leading-tight text-primary mb-6"
           >
-            Bring Nature Into <br /><span
+            Mang thiên nhiên vào <br /><span
               class="text-secondary italic font-medium"
-              >Every Space</span
+              >mọi không gian</span
             >
           </h1>
           <p
             class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg"
           >
-            Elevate your environment with curated miniature plant collections
-            and bespoke landscaping designed for modern living and corporate
-            excellence.
+            Nâng tầm không gian sống của bạn với bộ sưu tập cây cảnh mini được
+            tuyển chọn kỹ lưỡng và thiết kế cảnh quan riêng cho phong cách sống
+            hiện đại và sự sang trọng doanh nghiệp.
           </p>
           <div class="flex flex-wrap gap-4">
             <button
               class="font-label-md text-label-md px-8 py-4 bg-primary text-white rounded-full shadow-[0px_10px_30px_rgba(40,72,72,0.1)] hover:opacity-95 transition-all"
             >
-              Shop Plants
+              Mua cây cảnh
             </button>
             <button
               class="font-label-md text-label-md px-8 py-4 border-[1.5px] border-primary text-primary rounded-full hover:bg-primary/5 transition-all"
             >
-              Request Consultation
+              Yêu cầu tư vấn
             </button>
           </div>
         </div>
@@ -279,18 +259,18 @@
       >
         <div>
           <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
-            Curated Collection
+            Bộ sưu tập tuyển chọn
           </h2>
           <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
-            Our seasonal selection of rare miniature plants, expertly nurtured
-            for architectural beauty.
+            Lựa chọn theo mùa của những cây cảnh mini hiếm, được chăm sóc tỉ mỉ
+            để mang lại vẻ đẹp kiến trúc tinh tế.
           </p>
         </div>
         <a
           class="font-label-md text-label-md text-primary flex items-center gap-2 group transition-all"
           href="#"
         >
-          View All Plants
+          Xem tất cả cây cảnh
           <span
             class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
             >arrow_forward</span
@@ -308,18 +288,18 @@
             <img
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               data-alt="A high-end close-up photograph of a Sansevieria Masoniana in a sleek matte charcoal ceramic pot. The lighting is soft and directional, highlighting the vibrant green texture of the broad leaves. Set against a clean, off-white minimalist background that reflects a premium, Apple-like product photography style with a focus on organic details and architectural form."
-              src="https://lh3.googleusercontent.com/aida/AP1WRLuYxmBQo9za0VN7KW0Horcv_EE1fpndjIERBqYiqzYkFIdqBpyl15mbcZCdlsqv56MujjZO2rLCL9XHV9M3MFs83YluRAFVNcn7vuv0RMTiFD8TZMGVAYBbEUFNUNpPulRPWZqtOOgUdUN4pWfrx3MWdpdX2hbBTmhpTbd095Lo3k-RHK3sMNIM0QZLQs9MqL7e9Ld_yE7o-L8_M2CCJmP0wEidKIPk1Uu9syxs4DI-Mar15l8KQQnPQw"
+              src="../asset/images/product-1.jpg"
             />
             <div class="absolute top-4 left-4">
               <span
                 class="bg-surface/80 backdrop-blur-md px-3 py-1 rounded-full text-label-sm font-label-sm text-primary"
-                >Indoor</span
+                >Cây trong nhà</span
               >
             </div>
           </div>
           <div class="px-2">
             <h3 class="font-headline-md text-body-lg text-primary mb-1">
-              Architectural Fern
+              Dương xỉ kiến trúc
             </h3>
             <p class="font-body-md text-label-md text-on-surface-variant mb-4">
               $85.00
@@ -328,7 +308,7 @@
               <button
                 class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
               >
-                Add to Cart
+                Thêm vào giỏ
               </button>
               <button
                 class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container transition-all"
@@ -350,18 +330,18 @@
             <img
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               data-alt="A portrait of a minimalist Fiddle Leaf Fig tree in a designer wooden planter. The plant's large, glossy dark green leaves contrast beautifully with a bright, sun-drenched modern living room corner. The image emphasizes high-key lighting, clean lines, and a sense of sophisticated natural luxury, perfectly aligning with a premium landscaping brand aesthetic."
-              src="https://lh3.googleusercontent.com/aida/AP1WRLspuh2ViBjEfSsRgSwH44_9ThFdEZu31j6kXLk63zeeq1im6S9wSXs6l995klhv0q7tIx1bUGrCWy6Hh60i9C5k1O-S4qs-1WXF_kmFolOSHU2_HYWZFdaV03Ps-feK6rpm0zpuIcKDjqsRZo1NKLrY3Ar-FlwtHnEgo44ODwvkcRszFFx5-toyvNBFZsfYO-8de8N8s4I4FMzLdPXV9SmvorbvbW3tBGEjgVQPppNyS5uwLW6AbgplkA"
+              src="../asset/images/product-2.jpg"
             />
             <div class="absolute top-4 left-4">
               <span
                 class="bg-surface/80 backdrop-blur-md px-3 py-1 rounded-full text-label-sm font-label-sm text-primary"
-                >Limited</span
+                >Giới hạn</span
               >
             </div>
           </div>
           <div class="px-2">
             <h3 class="font-headline-md text-body-lg text-primary mb-1">
-              Fares Garden Fig Var.
+              Cây fig Fares Garden
             </h3>
             <p class="font-body-md text-label-md text-on-surface-variant mb-4">
               $120.00
@@ -370,7 +350,7 @@
               <button
                 class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
               >
-                Add to Cart
+                Thêm vào giỏ
               </button>
               <button
                 class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container transition-all"
@@ -392,12 +372,12 @@
             <img
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               data-alt="Close up of a miniature ornamental succulent arrangement in a shallow stone bowl. The variety of textures from smooth Echeveria to spiked Haworthia creates a tactile and complex composition. The lighting is soft and cinematic, highlighting the powdery blue and sage green hues of the plants against a neutral light-gray background."
-              src="https://lh3.googleusercontent.com/aida/AP1WRLuJi59f-oT1T-kdLlgzqdj0-k9rQ7U2QIoOKqzrl5PO92rzL-7LUV1RJYepgGfqnlJMMI9iKzQatzhu_otd_wZuffkR8fmyBoPRTnE3UA1NaKcQpJ6c2pjI5t0jYvTwbr-rGrfIAmJLbMEhIxNSjDbG6h7lysJU6-9oChgGEcn4zX3paZg19d-sr-brK5-Ctlzpact5YjHcrwdN_0kSi6TT6V9NahtzmNjznUP6XHvq8S0OwIvhhI0e1ZA"
+              src="../asset/images/product-3.jpg"
             />
           </div>
           <div class="px-2">
             <h3 class="font-headline-md text-body-lg text-primary mb-1">
-              Desert Harmony
+              Hòa điệu sa mạc
             </h3>
             <p class="font-body-md text-label-md text-on-surface-variant mb-4">
               $65.00
@@ -406,7 +386,7 @@
               <button
                 class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
               >
-                Add to Cart
+                Thêm vào giỏ
               </button>
               <button
                 class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container transition-all"
@@ -427,12 +407,12 @@
             <img
               class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               data-alt="An elegant Monstera Deliciosa leaf detail showing its iconic splits. The leaf is perfectly green and healthy, illuminated by soft side-lighting that creates gentle shadows. The presentation is elevated, focusing on the graphic quality of the plant as an architectural element in a high-end interior design context."
-              src="https://lh3.googleusercontent.com/aida/AP1WRLvyKPmFIYtCY5nFg_6tMJ58d4BqBKy9QFpOx3Apd7vK1fdTpXmjpC04bfRqEJNdxoNFLeFIoxtXaNOdZLAq3mcVxwMOCJyaQjdmi_AigoT81avNni3isgvDQbT61dhXRarpz_6mfwiIW_ZkhHFLwZPUpPqUV6-_qH8o6g7XyzYSMVQrtBObwyKjEvLu6DE24_-okf1Q7q0dDEk_2vW2kl144lPmhrovwTzQtKVO5K3VjR2YMaxFv0I4Eg"
+              src="../asset/images/product-4.jpg"
             />
           </div>
           <div class="px-2">
             <h3 class="font-headline-md text-body-lg text-primary mb-1">
-              Graphic Monstera
+              Monstera nghệ thuật
             </h3>
             <p class="font-body-md text-label-md text-on-surface-variant mb-4">
               $95.00
@@ -441,7 +421,7 @@
               <button
                 class="flex-1 bg-primary text-white py-2 rounded-lg text-label-sm hover:opacity-90 transition-all"
               >
-                Add to Cart
+                Thêm vào giỏ
               </button>
               <button
                 class="p-2 border border-outline-variant rounded-lg text-on-surface-variant hover:bg-surface-container transition-all"
@@ -462,7 +442,7 @@
       >
         <div class="text-center mb-20">
           <h2 class="font-headline-lg text-headline-lg text-primary mb-4">
-            Professional Services
+            Dịch vụ chuyên nghiệp
           </h2>
           <p
             class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto"
@@ -482,11 +462,11 @@
               <span class="material-symbols-outlined">yard</span>
             </div>
             <h3 class="font-headline-md text-headline-md text-primary mb-3">
-              Garden Landscaping
+              Thi công cảnh quan sân vườn
             </h3>
             <p class="font-body-md text-body-md text-on-surface-variant">
-              Residential transformations that blend organic textures with
-              functional outdoor living spaces.
+              Biến đổi không gian nhà ở bằng sự kết hợp giữa kết cấu tự nhiên và
+              tiện ích sống ngoài trời hiện đại.
             </p>
           </div>
           <div
@@ -498,11 +478,11 @@
               <span class="material-symbols-outlined">corporate_fare</span>
             </div>
             <h3 class="font-headline-md text-headline-md text-primary mb-3">
-              Office Decoration
+              Trang trí văn phòng
             </h3>
             <p class="font-body-md text-body-md text-on-surface-variant">
-              Boosting productivity and well-being with curated low-maintenance
-              biophilic office design.
+              Tăng năng suất và cảm giác thoải mái với thiết kế văn phòng xanh
+              dễ chăm sóc và phù hợp với môi trường làm việc.
             </p>
           </div>
           <div
@@ -514,11 +494,11 @@
               <span class="material-symbols-outlined">domain</span>
             </div>
             <h3 class="font-headline-md text-headline-md text-primary mb-3">
-              Green Space Design
+              Thiết kế không gian xanh
             </h3>
             <p class="font-body-md text-body-md text-on-surface-variant">
-              Full-scale architectural integration of plant life for commercial
-              and residential buildings.
+              Tích hợp cây xanh vào kiến trúc tổng thể cho các tòa nhà thương
+              mại và dân cư.
             </p>
           </div>
           <div
@@ -530,11 +510,11 @@
               <span class="material-symbols-outlined">eco</span>
             </div>
             <h3 class="font-headline-md text-headline-md text-primary mb-3">
-              Maintenance
+              Bảo trì
             </h3>
             <p class="font-body-md text-body-md text-on-surface-variant">
-              Expert horticultural care to ensure your green investment thrives
-              and matures over time.
+              Chăm sóc chuyên môn để đầu tư xanh của bạn luôn phát triển khỏe
+              mạnh và bền vững theo thời gian.
             </p>
           </div>
         </div>
@@ -552,22 +532,22 @@
           <img
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             data-alt="A wide-angle photo of a prestigious corporate lobby featuring a massive internal vertical garden wall. The space is filled with high-end modern furniture and polished concrete floors. Cool, even lighting highlights the architectural precision of the landscaping. The scene looks professional, expensive, and perfectly maintained, capturing a premium business solution."
-            src="https://lh3.googleusercontent.com/aida/AP1WRLuJNQKitxTxXz2I3qPxE8J9QJxXweBDhs1qHCcVUCsmhmMMJBphHpRQN3Hr5jneXW9_kpOo0StXwzzThw6t07icQGYkr0mKFiHTVikNPhsxhP1OV9XxTuWh7sAR98l0bcN2D0Nt34GGBOfn5qA1cY2ib8IvEAjMafUuOQAv9T7AXrFpWH9Wc37L3FjFO3LjfJSJ7fzXaOkZkjD_6AO9Km_atrguBoOnQODltkL3y0JhxVrfi-z75yBJgDM"
+            src="../asset/images/sub-banner-1.jpg"
           />
           <div
             class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-10"
           >
             <div class="text-white">
               <p class="font-label-md text-label-md text-secondary-fixed mb-2">
-                Portfolio Highlight
+                Điểm nổi bật dự án
               </p>
               <h3 class="font-headline-lg text-headline-lg mb-4">
-                The Zenith Tech HQ Vertical Forest
+                Rừng xanh đứng trong sảnh HQ Zenith Tech
               </h3>
               <button
                 class="flex items-center gap-2 font-label-md hover:underline"
               >
-                View Case Study
+                Xem hồ sơ dự án
                 <span class="material-symbols-outlined text-[18px]"
                   >open_in_new</span
                 >
@@ -580,7 +560,7 @@
           class="col-span-12 lg:col-span-4 bg-primary text-white p-10 rounded-[16px] flex flex-col justify-center"
         >
           <h2 class="font-headline-lg text-headline-lg mb-8">
-            Why Fares Garden ?
+            Vì sao chọn Fares Garden?
           </h2>
           <ul class="space-y-6">
             <li class="flex items-start gap-4">
@@ -588,9 +568,9 @@
                 >verified</span
               >
               <div>
-                <p class="font-label-md font-bold">Professional Team</p>
+                <p class="font-label-md font-bold">Đội ngũ chuyên nghiệp</p>
                 <p class="font-body-md text-on-primary-container text-sm">
-                  Certified landscape architects &amp; horticulturists.
+                  Kiến trúc sư cảnh quan và chuyên gia thực vật được chứng nhận.
                 </p>
               </div>
             </li>
@@ -599,9 +579,10 @@
                 >temp_preferences_custom</span
               >
               <div>
-                <p class="font-label-md font-bold">Customized Solutions</p>
+                <p class="font-label-md font-bold">Giải pháp tùy chỉnh</p>
                 <p class="font-body-md text-on-primary-container text-sm">
-                  Every design is unique to your space's lighting and style.
+                  Mỗi thiết kế đều phù hợp với ánh sáng và phong cách riêng của
+                  không gian bạn.
                 </p>
               </div>
             </li>
@@ -610,9 +591,11 @@
                 >local_shipping</span
               >
               <div>
-                <p class="font-label-md font-bold">Fast White-Glove Delivery</p>
+                <p class="font-label-md font-bold">
+                  Giao hàng tận nơi chuyên nghiệp
+                </p>
                 <p class="font-body-md text-on-primary-container text-sm">
-                  Direct, careful transport for all specimens.
+                  Vận chuyển cẩn thận, an toàn cho từng cây cảnh.
                 </p>
               </div>
             </li>
@@ -625,12 +608,12 @@
           <img
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             data-alt="A before and after transition showing a barren minimalist balcony transformed into a Fares Garden tropical oasis with potted plants and comfortable seating. High-contrast lighting and sharp details make the transformation feel impactful and professional."
-            src="https://lh3.googleusercontent.com/aida/AP1WRLteiXp6ZhwfShgS_cHc8ikHDSX-9hq8z-s3ooMRYk2_OLez_hBUstHDC1YuCLnzPoJKxZUOkNQmSOepwYjof04HW9W7B3gkUXiHzerG-wNWB7xe4WN8_lm4mSqBNTtmN0eReW9v7-mSNXPsAWGvPiPAXSzeSk7cCuXWJB33_0vR0WtIqdEtOREtfra_KkaprYAugfKy5uzor-NCQKLZLjcWp8SntE7CKv_DTdhtvXB89yk-Cs47lg1t9Eo"
+            src="../asset/images/sub-banner-2.jpg"
           />
           <div
             class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100"
           >
-            <p class="text-white font-label-md">Balcony Oasis</p>
+            <p class="text-white font-label-md">Thiên đường ban công</p>
           </div>
         </div>
         <div
@@ -639,12 +622,12 @@
           <img
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             data-alt="A serene indoor study with a collection of curated miniature bonsai and small succulents on floating wooden shelves. Soft, focused library-style lighting emphasizes the 'Fares Garden &amp; Linear' aesthetic of clean lines and organic focal points."
-            src="https://lh3.googleusercontent.com/aida/AP1WRLuoR4xU8auVtEC0p3jpeiYC80P9RHq4r9cQQ55ALp8KRZCepPfmK_Ivml_wxsmhm3QBv18eppEH1JU6rFnwVCG0G1yEALRBAlt1Qw56ELDkvkfxRh6qYoqF7iYy5e8_dacR0dMK0j9AtC4_BQCNvbsv8mbryFXtqebNFtriAlMmSfOjrmDN57KOGum7ZLC_WKOgnATUgQ575JwvxsGFM-tiTXGhxK6I75ujdE1C8sUNbsW8Yqoha_KQPbk"
+            src="../asset/images/sub-banner-3.jpg"
           />
           <div
             class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100"
           >
-            <p class="text-white font-label-md">Miniature Collection</p>
+            <p class="text-white font-label-md">Bộ sưu tập cây mini</p>
           </div>
         </div>
         <div
@@ -653,12 +636,12 @@
           <img
             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             data-alt="A modern kitchen with a herb garden integrated directly into the countertop design. The lighting is bright and clean, showcasing the practical and aesthetic intersection of nature and architecture in high-end residential design."
-            src="https://lh3.googleusercontent.com/aida/AP1WRLs1hgrvdHAphbPG2ve_qUwfyQmz1fdmSV1zDmV1jS3Zgh9-3EvI4ieLLw47wWBsFy_Lzhb19WIGXS8lpvHeeGF7WIjtlUjwCL8ZWYHT1yUccojNHMllkV9eXRqmM80Kw7ygKdmr8chO0o6KvKwo8ND88dQYjKcUBC57jjH06GUZPBCEx6vW5rfU-ExQpVNarTUpkAszRBtpwCAfGH6D6YQuha36gc5vTHT-1GWb-RdHTU-8189vvh76nS8"
+            src="../asset/images/sub-banner-1.jpg"
           />
           <div
             class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100"
           >
-            <p class="text-white font-label-md">Edible Green Design</p>
+            <p class="text-white font-label-md">Thiết kế xanh hữu ích</p>
           </div>
         </div>
       </div>
@@ -672,17 +655,17 @@
           <div>
             <span
               class="inline-block px-4 py-1 bg-secondary text-white rounded-full text-label-sm font-label-sm mb-6"
-              >Corporate Excellence</span
+              >Sự xuất sắc doanh nghiệp</span
             >
             <h2
               class="font-headline-lg text-[32px] md:text-headline-lg mb-6 leading-tight"
             >
-              Tailored Biophilic Solutions for Business
+              Giải pháp sinh học xanh dành cho doanh nghiệp
             </h2>
             <p class="font-body-lg text-on-primary-container mb-10">
-              We create productive, healthy environments through strategic plant
-              placement. Our corporate packages include full design,
-              installation, and ongoing maintenance.
+              Chúng tôi tạo ra môi trường làm việc hiệu quả và lành mạnh thông
+              qua việc bố trí cây xanh chiến lược. Gói dịch vụ doanh nghiệp của
+              chúng tôi gồm thiết kế, thi công và bảo trì liên tục.
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div class="flex gap-4">
@@ -691,9 +674,9 @@
                   >filter_vintage</span
                 >
                 <div>
-                  <h4 class="font-label-md mb-1">Green Office Concept</h4>
+                  <h4 class="font-label-md mb-1">Khái niệm văn phòng xanh</h4>
                   <p class="text-sm text-on-primary-container">
-                    Improve air quality and acoustics with living partitions.
+                    Cải thiện chất lượng không khí và âm học bằng vách cây xanh.
                   </p>
                 </div>
               </div>
@@ -703,10 +686,10 @@
                   >architecture</span
                 >
                 <div>
-                  <h4 class="font-label-md mb-1">Lobby Installation</h4>
+                  <h4 class="font-label-md mb-1">Thi công sảnh chờ</h4>
                   <p class="text-sm text-on-primary-container">
-                    Make a powerful first impression with architectural
-                    greenery.
+                    Tạo ấn tượng mạnh mẽ ngay từ lần đầu tiên với cây xanh kiến
+                    trúc.
                   </p>
                 </div>
               </div>
@@ -717,7 +700,7 @@
               <img
                 class="w-full h-full object-cover"
                 data-alt="A professional team of landscape designers in a collaborative meeting, looking at blueprints and small miniature plant samples. The setting is a bright, modern office with large windows. The lighting is professional and high-key, conveying a sense of expertise and premium service delivery."
-                src="https://lh3.googleusercontent.com/aida/AP1WRLvZZ6lP0Ai9IkVDa78NAp7EIaeZwEzamuq-HWnnDepwyy1O9OSsQEVqV8SVOFnYa7-or-5jvaCSnpYNfrFGG9uW4NbKIUt_DUPKlbi5CT4S0pTlyC3D0m1yhOH5LwJEZpyDeeZDgN8dsWPd-r2-BBZ29qA-dY6KGmvz_HVfs22i-0CdytQuxR6fQqhl6OFkJUWZ_o3aPslrOWyI6AI7ttPoUQDoNtRd-sQk_oOWwAYqVifwSvHQHyVLfHk"
+                src="../asset/images/business-solutions.jpg"
               />
             </div>
             <!-- Stats / Floating Badge -->
@@ -726,7 +709,7 @@
             >
               <p class="font-display-lg text-4xl mb-1">250+</p>
               <p class="font-label-md text-on-surface-variant">
-                Corporate Clients Trusted Us
+                Hơn 250 khách hàng doanh nghiệp tin tưởng
               </p>
             </div>
           </div>
@@ -738,7 +721,7 @@
       class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center"
     >
       <h2 class="font-headline-lg text-headline-lg text-primary mb-16">
-        The Fares Garden Journey
+        Hành trình Fares Garden
       </h2>
       <div class="relative">
         <!-- Connecting Line (Desktop) -->
@@ -754,9 +737,10 @@
             >
               <span class="material-symbols-outlined text-[32px]">chat</span>
             </div>
-            <h3 class="font-label-md text-primary mb-2">1. Consultation</h3>
+            <h3 class="font-label-md text-primary mb-2">1. Tư vấn</h3>
             <p class="text-xs text-on-surface-variant max-w-[160px]">
-              Initial meeting to understand your vision and spatial needs.
+              Buổi gặp đầu tiên để hiểu rõ ý tưởng và nhu cầu không gian của
+              bạn.
             </p>
           </div>
           <div class="flex flex-col items-center">
@@ -767,9 +751,11 @@
                 >straighten</span
               >
             </div>
-            <h3 class="font-label-md text-primary mb-2">2. Site Survey</h3>
+            <h3 class="font-label-md text-primary mb-2">
+              2. Khảo sát hiện trạng
+            </h3>
             <p class="text-xs text-on-surface-variant max-w-[160px]">
-              Precise measurement and light assessment of your space.
+              Đo đạc chính xác và đánh giá ánh sáng cho không gian của bạn.
             </p>
           </div>
           <div class="flex flex-col items-center">
@@ -780,9 +766,10 @@
                 >design_services</span
               >
             </div>
-            <h3 class="font-label-md text-primary mb-2">3. Design</h3>
+            <h3 class="font-label-md text-primary mb-2">3. Thiết kế</h3>
             <p class="text-xs text-on-surface-variant max-w-[160px]">
-              Bespoke proposal featuring curated plants and layouts.
+              Phương án riêng biệt với cây cảnh và bố cục được tuyển chọn kỹ
+              lưỡng.
             </p>
           </div>
           <div class="flex flex-col items-center">
@@ -793,9 +780,10 @@
                 >construction</span
               >
             </div>
-            <h3 class="font-label-md text-primary mb-2">4. Installation</h3>
+            <h3 class="font-label-md text-primary mb-2">4. Thi công</h3>
             <p class="text-xs text-on-surface-variant max-w-[160px]">
-              Careful delivery and expert placement of your greenery.
+              Vận chuyển cẩn thận và lắp đặt chuyên nghiệp cho hệ thống cây
+              xanh.
             </p>
           </div>
           <div class="flex flex-col items-center">
@@ -806,9 +794,10 @@
                 >handyman</span
               >
             </div>
-            <h3 class="font-label-md text-primary mb-2">5. Maintenance</h3>
+            <h3 class="font-label-md text-primary mb-2">5. Bảo trì</h3>
             <p class="text-xs text-on-surface-variant max-w-[160px]">
-              Ongoing expert care to ensure long-term health and beauty.
+              Chăm sóc liên tục để đảm bảo cây xanh luôn khỏe mạnh và đẹp lâu
+              dài.
             </p>
           </div>
         </div>
@@ -822,7 +811,7 @@
         <h2
           class="font-headline-lg text-headline-lg text-primary mb-16 text-center"
         >
-          Transforming Living Standards
+          Chuyển đổi tiêu chuẩn sống
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
           <!-- Testimonial 1 -->
@@ -855,9 +844,9 @@
               >
             </div>
             <p class="font-body-md text-on-surface-variant mb-8 italic">
-              "The team at Fares Garden transformed our sterile office into a
-              vibrant sanctuary. Our employee engagement has noticeably
-              increased since the installation."
+              "Đội ngũ Fares Garden đã biến văn phòng khô khan của chúng tôi
+              thành một nơi thư giãn sống động. Mức độ gắn kết của nhân viên đã
+              tăng rõ rệt sau khi thi công."
             </p>
             <div class="flex items-center gap-4">
               <img
@@ -903,9 +892,10 @@
               >
             </div>
             <p class="font-body-md text-on-surface-variant mb-8 italic">
-              "Exquisite attention to detail. Their miniature plant collection
-              is unlike anything I've seen. Truly architectural pieces that
-              redefined my penthouse terrace."
+              "Sự chăm chút đến từng chi tiết thật đáng kinh ngạc. Bộ sưu tập
+              cây mini của họ khác biệt hoàn toàn với những gì tôi từng thấy.
+              Đây thực sự là những tác phẩm kiến trúc cho sân thượng căn hộ của
+              tôi."
             </p>
             <div class="flex items-center gap-4">
               <img
@@ -949,9 +939,9 @@
               >
             </div>
             <p class="font-body-md text-on-surface-variant mb-8 italic">
-              "Their maintenance service is impeccable. Our building lobby has
-              never looked better, and the plants have flourished remarkably
-              under their care."
+              "Dịch vụ bảo trì của họ thật hoàn hảo. Sảnh tầng trệt của tòa nhà
+              chưa bao giờ đẹp như vậy, và các loại cây cũng phát triển rất tốt
+              dưới sự chăm sóc của họ."
             </p>
             <div class="flex items-center gap-4">
               <img
@@ -981,17 +971,17 @@
           class="lg:w-1/2 p-12 md:p-20 text-white flex flex-col justify-center"
         >
           <h2 class="font-display-lg text-[32px] md:text-headline-lg mb-6">
-            Ready to green your space?
+            Bạn đã sẵn sàng khiến không gian xanh hơn chưa?
           </h2>
           <p class="font-body-lg text-on-primary-container mb-10">
-            Get a free design consultation and site survey. Our experts will
-            help you select the perfect plants for your specific environment.
+            Nhận tư vấn thiết kế và khảo sát hiện trạng miễn phí. Chúng tôi sẽ
+            giúp bạn lựa chọn loại cây phù hợp nhất cho môi trường của mình.
           </p>
           <div class="flex flex-wrap gap-4 mb-12">
             <button
               class="bg-white text-primary px-8 py-4 rounded-full font-label-md hover:opacity-90 transition-all"
             >
-              Get Free Consultation
+              Nhận tư vấn miễn phí
             </button>
             <div class="flex items-center gap-3">
               <a
@@ -1015,7 +1005,7 @@
               <div>
                 <label
                   class="block text-label-sm font-label-sm text-primary mb-2"
-                  >Name</label
+                  >Họ tên</label
                 >
                 <input
                   class="w-full bg-surface border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
@@ -1037,7 +1027,7 @@
             </div>
             <div>
               <label class="block text-label-sm font-label-sm text-primary mb-2"
-                >Service Type</label
+                >Loại dịch vụ</label
               >
               <select
                 class="w-full bg-surface border-none rounded-lg p-4 focus:ring-1 focus:ring-primary appearance-none"
@@ -1050,11 +1040,11 @@
             </div>
             <div>
               <label class="block text-label-sm font-label-sm text-primary mb-2"
-                >Message</label
+                >Tin nhắn</label
               >
               <textarea
                 class="w-full bg-surface border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
-                placeholder="Tell us about your space..."
+                placeholder="Hãy kể cho chúng tôi về không gian của bạn..."
                 rows="4"
               ></textarea>
             </div>
@@ -1062,7 +1052,7 @@
               class="w-full bg-primary text-white py-4 rounded-full font-label-md shadow-lg hover:opacity-95 transition-all"
               type="submit"
             >
-              Send Request
+              Gửi yêu cầu
             </button>
           </form>
         </div>
@@ -1078,8 +1068,8 @@
             Fares Garden
           </div>
           <p class="font-body-md text-on-surface-variant mb-6">
-            Crafting organic sanctuaries for modern life through architectural
-            plant design.
+            Tạo nên những nơi trú ẩn xanh mát cho cuộc sống hiện đại thông qua
+            thiết kế cây cảnh kiến trúc.
           </p>
           <div class="flex gap-4">
             <a
@@ -1100,21 +1090,21 @@
           </div>
         </div>
         <div>
-          <h4 class="font-label-md text-primary mb-6">Services</h4>
+          <h4 class="font-label-md text-primary mb-6">Dịch vụ</h4>
           <ul class="space-y-4 font-body-md text-on-surface-variant">
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Residential Landscaping</a
+                >Thi công cảnh quan nhà ở</a
               >
             </li>
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Office Greenery</a
+                >Cây xanh văn phòng</a
               >
             </li>
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Plant Rental</a
+                >Thuê cây cảnh</a
               >
             </li>
             <li>
@@ -1125,51 +1115,51 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-label-md text-primary mb-6">Company</h4>
+          <h4 class="font-label-md text-primary mb-6">Công ty</h4>
           <ul class="space-y-4 font-body-md text-on-surface-variant">
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Our Portfolio</a
+                >Dự án của chúng tôi</a
               >
             </li>
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Care Guides</a
+                >Hướng dẫn chăm sóc</a
               >
             </li>
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >About Us</a
+                >Về chúng tôi</a
               >
             </li>
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Careers</a
+                >Tuyển dụng</a
               >
             </li>
           </ul>
         </div>
         <div>
-          <h4 class="font-label-md text-primary mb-6">Support</h4>
+          <h4 class="font-label-md text-primary mb-6">Hỗ trợ</h4>
           <ul class="space-y-4 font-body-md text-on-surface-variant">
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Privacy Policy</a
+                >Chính sách bảo mật</a
               >
             </li>
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Terms of Service</a
+                >Điều khoản dịch vụ</a
               >
             </li>
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Shipping</a
+                >Vận chuyển</a
               >
             </li>
             <li>
               <a class="hover:text-primary transition-colors" href="#"
-                >Contact</a
+                >Liên hệ</a
               >
             </li>
           </ul>
@@ -1179,7 +1169,7 @@
         class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-outline-variant text-center md:text-left"
       >
         <p class="font-body-md text-on-surface-variant text-sm">
-          © 2026 Fares Garden Linear Ornamental. All rights reserved.
+          © 2026 Fares Garden Linear Ornamental. Mọi quyền được bảo lưu.
         </p>
       </div>
     </footer>
@@ -1190,21 +1180,9 @@
       <span class="material-symbols-outlined text-[28px]">calendar_month</span>
       <span
         class="absolute right-20 bg-primary px-4 py-2 rounded-lg text-white text-sm font-label-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
-        >Book Consultation</span
+        >Đặt lịch tư vấn</span
       >
     </button>
-    <script>
-      // Simple scroll behavior for navbar
-      window.addEventListener("scroll", () => {
-        const nav = document.querySelector("nav");
-        if (window.scrollY > 50) {
-          nav.classList.add("py-2");
-          nav.classList.remove("py-0");
-        } else {
-          nav.classList.add("py-0");
-          nav.classList.remove("py-2");
-        }
-      });
-    </script>
+    <script src="../js/app.js"></script>
   </body>
 </html>
