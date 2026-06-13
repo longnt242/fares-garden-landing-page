@@ -158,7 +158,7 @@
         >
           Fares Garden
         </div>
-        <div class="top-nav-menu hidden md:flex items-center gap-8">
+        <div class="top-nav-menu hidden md:flex items-center gap-3 xl:gap-8">
           <a
             class="top-nav-link is-active font-body-md text-body-md"
             href="#portfolio"
@@ -181,20 +181,20 @@
           >
           <span class="top-nav-indicator" aria-hidden="true"></span>
         </div>
-        <div class="flex items-center gap-2 md:gap-4">
+        <div class="flex shrink-0 items-center gap-2 md:ml-4 xl:ml-8 xl:gap-4">
           <a
             href="../vi/index.html"
-            class="font-label-md text-label-md px-4 py-2 rounded-full border border-primary/30 text-primary hover:bg-primary/5 transition-all"
+            class="font-label-md text-label-md px-3 xl:px-4 py-2 rounded-full border border-primary/30 text-primary hover:bg-primary/5 transition-all"
           >
             VI
           </a>
           <button
-            class="hidden md:block font-label-md text-label-md px-6 py-2.5 rounded-full border-[1.5px] border-primary text-primary hover:bg-primary/5 transition-all"
+            class="hidden md:block font-label-md text-label-md px-4 xl:px-6 py-2.5 rounded-full border-[1.5px] border-primary text-primary hover:bg-primary/5 transition-all"
           >
             Shop
           </button>
           <button
-            class="font-label-md text-label-md px-6 py-2.5 rounded-full bg-primary text-white shadow-[0px_10px_30px_rgba(40,72,72,0.05)] hover:opacity-90 transition-all active:scale-95"
+            class="font-label-md text-label-md px-4 xl:px-6 py-2.5 rounded-full bg-primary text-white shadow-[0px_10px_30px_rgba(40,72,72,0.05)] hover:opacity-90 transition-all active:scale-95"
           >
             Consultation
           </button>
@@ -243,7 +243,7 @@
               Shop Plants
             </button>
             <button
-              class="font-label-md text-label-md px-8 py-4 border-[1.5px] border-primary text-primary rounded-full hover:bg-primary/5 transition-all"
+              class="consultation-cta font-label-md text-label-md px-8 py-4 border-[1.5px] border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all"
             >
               Request Consultation
             </button>
@@ -446,20 +446,6 @@
               Size: 35-45cm tall, compact tabletop form
             </p>
           </div>
-          <button
-            class="plant-showcase-nav plant-showcase-prev"
-            type="button"
-            aria-label="Previous plants"
-          >
-            <span class="material-symbols-outlined">chevron_left</span>
-          </button>
-          <button
-            class="plant-showcase-nav plant-showcase-next"
-            type="button"
-            aria-label="Next plants"
-          >
-            <span class="material-symbols-outlined">chevron_right</span>
-          </button>
           <div class="plant-showcase-thumbs">
             <button
               class="plant-showcase-thumb is-active rounded-[10px] p-1.5 text-left"
@@ -572,6 +558,11 @@
               <span class="font-label-md text-[11px] leading-tight">Studio Green Mini</span>
             </button>
           </div>
+          <div
+            class="plant-showcase-dots"
+            data-label="Show plant group"
+            aria-label="Plant groups"
+          ></div>
         </div>
       </div>
     </section>
@@ -1135,7 +1126,25 @@
           </div>
         </div>
         <div class="lg:w-1/2 bg-surface-container p-12 md:p-20">
-          <form class="space-y-6">
+          <form
+            class="consultation-form space-y-6"
+            action="https://script.google.com/macros/s/AKfycbwpFLBtxGo3qOUQCmhwoTOudYv1mygrBUp1JFGLRnyhAFx72vgNGPF_OtoozGkkMnc/exec"
+            method="post"
+            data-sending="Sending..."
+            data-success="Thank you. Your request has been sent."
+            data-error="Could not send your request. Please try again."
+            data-too-fast="Please wait a moment before submitting."
+          >
+            <div class="absolute -left-[9999px] h-px w-px overflow-hidden" aria-hidden="true">
+              <label for="consultation-website-en">Website</label>
+              <input
+                id="consultation-website-en"
+                name="Website"
+                type="text"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label
@@ -1144,7 +1153,9 @@
                 >
                 <input
                   class="w-full bg-surface border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
+                  name="Name"
                   placeholder="John Doe"
+                  required
                   type="text"
                 />
               </div>
@@ -1155,8 +1166,26 @@
                 >
                 <input
                   class="w-full bg-surface border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
+                  name="Email"
                   placeholder="john@example.com"
+                  required
                   type="email"
+                />
+              </div>
+              <div class="md:col-span-2">
+                <label
+                  class="block text-label-sm font-label-sm text-primary mb-2"
+                  >Phone</label
+                >
+                <input
+                  class="w-full bg-surface border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
+                  name="Phone"
+                  placeholder="0987654321"
+                  autocomplete="tel"
+                  inputmode="numeric"
+                  pattern="[0-9]+"
+                  required
+                  type="tel"
                 />
               </div>
             </div>
@@ -1166,6 +1195,7 @@
               >
               <select
                 class="w-full bg-surface border-none rounded-lg p-4 focus:ring-1 focus:ring-primary appearance-none"
+                name="Service"
               >
                 <option>Office Plant Decoration</option>
                 <option>Garden Landscaping</option>
@@ -1179,6 +1209,7 @@
               >
               <textarea
                 class="w-full bg-surface border-none rounded-lg p-4 focus:ring-1 focus:ring-primary"
+                name="Message"
                 placeholder="Tell us about your space..."
                 rows="4"
               ></textarea>
@@ -1189,6 +1220,7 @@
             >
               Send Request
             </button>
+            <p class="consultation-form-status text-sm" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>

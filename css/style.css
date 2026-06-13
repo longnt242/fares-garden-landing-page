@@ -54,6 +54,39 @@ h3,
   text-shadow: 0 2px 12px rgba(248, 250, 250, 0.75);
 }
 
+.consultation-cta {
+  animation: consultation-cta-pulse 1.8s ease-in-out infinite;
+}
+
+.consultation-cta:hover {
+  animation-play-state: paused;
+}
+
+@keyframes consultation-cta-pulse {
+  0%,
+  40%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 50, 50, 0);
+    transform: translateY(0);
+  }
+
+  10% {
+    box-shadow: 0 0 0 8px rgba(16, 50, 50, 0.14);
+    transform: translateY(-2px);
+  }
+
+  25% {
+    box-shadow: 0 0 0 14px rgba(16, 50, 50, 0);
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .consultation-cta {
+    animation: none;
+  }
+}
+
 .plant-image-frame {
   isolation: isolate;
 }
@@ -165,26 +198,41 @@ h3,
   position: absolute;
   right: clamp(16px, 4vw, 48px);
   left: auto;
-  bottom: 18px;
+  bottom: 42px;
   z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
   gap: 8px;
+  overflow-x: auto;
+  padding-top: 6px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  touch-action: pan-y;
+  cursor: grab;
   width: min(420px, calc(100% - 32px));
 }
 
-.plant-showcase-thumb.is-hidden {
+.plant-showcase-thumbs::-webkit-scrollbar {
   display: none;
+}
+
+.plant-showcase-thumbs.is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+  user-select: none;
 }
 
 .plant-showcase-thumb {
   display: flex;
+  flex: 0 0 calc((100% - 24px) / 4);
   flex-direction: column;
   min-height: 116px;
   background: #43664d;
   backdrop-filter: blur(10px);
   color: #ffffff;
   opacity: 0.58;
+  scroll-snap-align: start;
   transition:
     background-color 0.2s ease,
     opacity 0.2s ease,
@@ -209,6 +257,8 @@ h3,
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
+  pointer-events: none;
+  user-select: none;
   transition: transform 0.2s ease;
 }
 
@@ -220,36 +270,33 @@ h3,
   text-align: center;
 }
 
-.plant-showcase-nav {
+.plant-showcase-dots {
   position: absolute;
-  top: 50%;
+  right: clamp(16px, 4vw, 48px);
+  bottom: 16px;
   z-index: 3;
   display: flex;
-  width: 40px;
-  height: 40px;
   align-items: center;
   justify-content: center;
+  gap: 8px;
+  width: min(420px, calc(100% - 32px));
+}
+
+.plant-showcase-dot {
+  width: 8px;
+  height: 8px;
   border-radius: 9999px;
-  background: rgba(67, 102, 77, 0.92);
-  color: #ffffff;
-  box-shadow: 0 12px 28px rgba(16, 50, 50, 0.24);
-  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.48);
   transition:
     background-color 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    width 0.2s ease;
 }
 
-.plant-showcase-nav:hover {
-  background: #103232;
-  transform: translateY(-50%) scale(1.06);
-}
-
-.plant-showcase-prev {
-  left: 18px;
-}
-
-.plant-showcase-next {
-  right: 18px;
+.plant-showcase-dot:hover,
+.plant-showcase-dot.is-active {
+  width: 22px;
+  background: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -260,20 +307,11 @@ h3,
   .plant-showcase-thumbs {
     right: auto;
     left: 50%;
-    bottom: 12px;
-    display: flex;
-    justify-content: center;
+    bottom: 38px;
     max-width: none;
-    overflow-x: auto;
-    padding-top: 6px;
     padding-bottom: 2px;
-    scrollbar-width: none;
     width: min(100% - 24px, 420px);
     transform: translateX(-50%);
-  }
-
-  .plant-showcase-thumbs::-webkit-scrollbar {
-    display: none;
   }
 
   .plant-showcase-thumb {
@@ -300,13 +338,19 @@ h3,
   .plant-showcase-content {
     left: 20px;
     right: 20px;
-    bottom: 132px;
+    bottom: 152px;
     max-width: none;
+    transform: translateY(-10px);
+  }
+
+  .plant-showcase-price {
+    margin-bottom: 6px;
   }
 
   .plant-showcase-name {
     font-size: 32px;
     line-height: 1.1;
+    margin-bottom: 8px;
   }
 
   .plant-showcase-size {
@@ -314,17 +358,12 @@ h3,
     line-height: 1.45;
   }
 
-  .plant-showcase-nav {
-    width: 34px;
-    height: 34px;
-  }
-
-  .plant-showcase-prev {
-    left: 10px;
-  }
-
-  .plant-showcase-next {
-    right: 10px;
+  .plant-showcase-dots {
+    right: auto;
+    left: 50%;
+    bottom: 14px;
+    width: min(100% - 24px, 420px);
+    transform: translateX(-50%);
   }
 }
 
@@ -339,7 +378,7 @@ h3,
   }
 
   .plant-showcase-content {
-    bottom: 118px;
+    bottom: 168px;
   }
 
   .plant-showcase-name {

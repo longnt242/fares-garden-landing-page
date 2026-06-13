@@ -72,11 +72,10 @@ const plantShowcaseImage = document.querySelector(".plant-showcase-image");
 const plantShowcaseName = document.querySelector(".plant-showcase-name");
 const plantShowcasePrice = document.querySelector(".plant-showcase-price");
 const plantShowcaseSize = document.querySelector(".plant-showcase-size");
+const plantShowcaseThumbTrack = document.querySelector(".plant-showcase-thumbs");
 const plantShowcaseThumbs = document.querySelectorAll(".plant-showcase-thumb");
-const plantShowcasePrev = document.querySelector(".plant-showcase-prev");
-const plantShowcaseNext = document.querySelector(".plant-showcase-next");
+const plantShowcaseDots = document.querySelector(".plant-showcase-dots");
 const plantShowcasePageSize = 4;
-let plantShowcaseStart = 0;
 
 if (viewAllPlantsTrigger && featuredPlantsGrid && plantShowcase) {
   viewAllPlantsTrigger.addEventListener("click", (event) => {
@@ -95,7 +94,12 @@ if (viewAllPlantsTrigger && featuredPlantsGrid && plantShowcase) {
 }
 
 plantShowcaseThumbs.forEach((thumb) => {
-  thumb.addEventListener("click", () => {
+  thumb.addEventListener("click", (event) => {
+    if (plantShowcaseThumbTrack?.dataset.suppressClick === "true") {
+      event.preventDefault();
+      return;
+    }
+
     if (
       !plantShowcaseImage ||
       !plantShowcaseName ||
@@ -123,37 +127,182 @@ plantShowcaseThumbs.forEach((thumb) => {
   });
 });
 
-const updatePlantShowcasePage = () => {
-  plantShowcaseThumbs.forEach((thumb, index) => {
-    const visibleIndexes = Array.from(
-      { length: plantShowcasePageSize },
-      (_, offset) => (plantShowcaseStart + offset) % plantShowcaseThumbs.length,
+if (plantShowcaseThumbTrack && plantShowcaseThumbs.length && plantShowcaseDots) {
+  const pageCount = Math.ceil(plantShowcaseThumbs.length / plantShowcasePageSize);
+  const dotLabel = plantShowcaseDots.dataset.label || "Show plant group";
+  let scrollFrame;
+  let dragStartX = 0;
+  let dragStartScrollLeft = 0;
+  let isDragging = false;
+  let activePointerId = null;
+
+  const getPageScrollLeft = (pageIndex) => {
+    const targetThumb = plantShowcaseThumbs[pageIndex * plantShowcasePageSize];
+    const maxScrollLeft =
+      plantShowcaseThumbTrack.scrollWidth - plantShowcaseThumbTrack.clientWidth;
+
+    return Math.min(
+      targetThumb.offsetLeft - plantShowcaseThumbs[0].offsetLeft,
+      maxScrollLeft,
     );
-    const isVisible = visibleIndexes.includes(index);
+  };
 
-    thumb.classList.toggle("is-hidden", !isVisible);
+  const setActivePlantShowcaseDot = () => {
+    const pagePositions = Array.from({ length: pageCount }, (_, pageIndex) =>
+      getPageScrollLeft(pageIndex),
+    );
+    const activePage = pagePositions.reduce(
+      (closestPage, position, pageIndex) =>
+        Math.abs(position - plantShowcaseThumbTrack.scrollLeft) <
+        Math.abs(pagePositions[closestPage] - plantShowcaseThumbTrack.scrollLeft)
+          ? pageIndex
+          : closestPage,
+      0,
+    );
+
+    plantShowcaseDots.querySelectorAll(".plant-showcase-dot").forEach((dot, index) => {
+      const isActive = index === activePage;
+      dot.classList.toggle("is-active", isActive);
+      dot.setAttribute("aria-current", isActive ? "true" : "false");
+    });
+  };
+
+  Array.from({ length: pageCount }, (_, pageIndex) => {
+    const dot = document.createElement("button");
+    dot.className = "plant-showcase-dot";
+    dot.type = "button";
+    dot.setAttribute("aria-label", `${dotLabel} ${pageIndex + 1}`);
+    dot.addEventListener("click", () => {
+      plantShowcaseThumbTrack.scrollTo({
+        left: getPageScrollLeft(pageIndex),
+        behavior: "smooth",
+      });
+    });
+    plantShowcaseDots.append(dot);
   });
-};
 
-if (plantShowcaseThumbs.length) {
-  updatePlantShowcasePage();
+  plantShowcaseThumbTrack.addEventListener("scroll", () => {
+    window.cancelAnimationFrame(scrollFrame);
+    scrollFrame = window.requestAnimationFrame(setActivePlantShowcaseDot);
+  });
+
+  plantShowcaseThumbTrack.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+
+    dragStartX = event.clientX;
+    dragStartScrollLeft = plantShowcaseThumbTrack.scrollLeft;
+    isDragging = false;
+    activePointerId = event.pointerId;
+    plantShowcaseThumbTrack.dataset.suppressClick = "false";
+  });
+
+  plantShowcaseThumbTrack.addEventListener("pointermove", (event) => {
+    if (event.pointerId !== activePointerId) return;
+
+    const dragDistance = event.clientX - dragStartX;
+    if (Math.abs(dragDistance) > 5) {
+      if (!isDragging) {
+        plantShowcaseThumbTrack.setPointerCapture(event.pointerId);
+      }
+
+      isDragging = true;
+      plantShowcaseThumbTrack.classList.add("is-dragging");
+      plantShowcaseThumbTrack.scrollLeft = dragStartScrollLeft - dragDistance;
+    }
+  });
+
+  const stopPlantShowcaseDrag = (event) => {
+    if (event.pointerId !== activePointerId) return;
+
+    if (plantShowcaseThumbTrack.hasPointerCapture(event.pointerId)) {
+      plantShowcaseThumbTrack.releasePointerCapture(event.pointerId);
+    }
+
+    plantShowcaseThumbTrack.classList.remove("is-dragging");
+    plantShowcaseThumbTrack.dataset.suppressClick = String(isDragging);
+    activePointerId = null;
+    window.setTimeout(() => {
+      plantShowcaseThumbTrack.dataset.suppressClick = "false";
+    }, 0);
+  };
+
+  plantShowcaseThumbTrack.addEventListener("pointerup", stopPlantShowcaseDrag);
+  plantShowcaseThumbTrack.addEventListener("pointercancel", stopPlantShowcaseDrag);
+  window.addEventListener("resize", setActivePlantShowcaseDot);
+  setActivePlantShowcaseDot();
 }
 
-if (plantShowcasePrev) {
-  plantShowcasePrev.addEventListener("click", () => {
-    plantShowcaseStart =
-      (plantShowcaseStart - plantShowcasePageSize + plantShowcaseThumbs.length) %
-      plantShowcaseThumbs.length;
+document.querySelectorAll(".consultation-form").forEach((form) => {
+  const phoneInput = form.querySelector('input[name="Phone"]');
+  const honeypotInput = form.querySelector('input[name="Website"]');
+  const minimumSubmitDelay = 3000;
+  let formReadyAt = Date.now();
 
-    updatePlantShowcasePage();
+  phoneInput?.addEventListener("input", () => {
+    phoneInput.value = phoneInput.value.replace(/\D/g, "");
   });
-}
 
-if (plantShowcaseNext) {
-  plantShowcaseNext.addEventListener("click", () => {
-    plantShowcaseStart =
-      (plantShowcaseStart + plantShowcasePageSize) % plantShowcaseThumbs.length;
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-    updatePlantShowcasePage();
+    const submitButton = form.querySelector('button[type="submit"]');
+    const status = form.querySelector(".consultation-form-status");
+    const originalButtonText = submitButton?.textContent.trim() || "Submit";
+
+    if (honeypotInput?.value) {
+      form.reset();
+      formReadyAt = Date.now();
+      if (status) {
+        status.textContent = form.dataset.success || "Your request has been sent.";
+        status.className = "consultation-form-status text-sm text-primary";
+      }
+      return;
+    }
+
+    if (Date.now() - formReadyAt < minimumSubmitDelay) {
+      if (status) {
+        status.textContent =
+          form.dataset.tooFast || "Please wait a moment before submitting.";
+        status.className = "consultation-form-status text-sm text-red-700";
+      }
+      return;
+    }
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.classList.add("cursor-wait", "opacity-70");
+      submitButton.textContent = form.dataset.sending || "Sending...";
+    }
+
+    if (status) {
+      status.textContent = "";
+      status.className = "consultation-form-status text-sm";
+    }
+
+    try {
+      await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        mode: "no-cors",
+      });
+
+      form.reset();
+      formReadyAt = Date.now();
+      if (status) {
+        status.textContent = form.dataset.success || "Your request has been sent.";
+        status.classList.add("text-primary");
+      }
+    } catch (error) {
+      if (status) {
+        status.textContent = form.dataset.error || "Could not send your request.";
+        status.classList.add("text-red-700");
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.classList.remove("cursor-wait", "opacity-70");
+        submitButton.textContent = originalButtonText;
+      }
+    }
   });
-}
+});
