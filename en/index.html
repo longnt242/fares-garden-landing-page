@@ -181,7 +181,7 @@
           >
           <span class="top-nav-indicator" aria-hidden="true"></span>
         </div>
-        <div class="flex shrink-0 items-center gap-2 md:ml-4 xl:ml-8 xl:gap-4">
+        <div class="hidden shrink-0 items-center gap-2 md:ml-4 md:flex xl:ml-8 xl:gap-4">
           <a
             href="../vi/index.html"
             class="font-label-md text-label-md px-3 xl:px-4 py-2 rounded-full border border-primary/30 text-primary hover:bg-primary/5 transition-all"
@@ -198,6 +198,38 @@
           >
             Consultation
           </button>
+        </div>
+        <button
+          class="mobile-menu-toggle inline-flex h-11 w-11 items-center justify-center rounded-full border border-primary/30 text-primary transition-colors hover:bg-primary/5 md:hidden"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="mobile-navigation"
+          aria-expanded="false"
+        >
+          <span class="material-symbols-outlined mobile-menu-icon" aria-hidden="true">menu</span>
+        </button>
+      </div>
+      <div
+        id="mobile-navigation"
+        class="mobile-navigation hidden border-t border-primary/10 bg-surface/95 px-margin-mobile pb-5 pt-3 shadow-[0px_18px_30px_rgba(40,72,72,0.08)] md:hidden"
+      >
+        <div class="top-nav-menu flex flex-col">
+          <a class="top-nav-link is-active font-body-md text-body-md" href="#portfolio">Portfolio</a>
+          <a class="top-nav-link font-body-md text-body-md" href="#services">Services</a>
+          <a class="top-nav-link font-body-md text-body-md" href="#plants">Plants</a>
+          <a class="top-nav-link font-body-md text-body-md" href="#about">About</a>
+        </div>
+        <div class="mt-3 grid grid-cols-3 gap-2 pt-4">
+          <a
+            href="../vi/index.html"
+            class="flex items-center justify-center rounded-full border border-primary/30 px-3 py-2.5 font-label-md text-label-md text-primary transition-colors hover:bg-primary hover:text-white"
+          >VI</a>
+          <button
+            class="rounded-full border-[1.5px] border-primary px-3 py-2.5 font-label-md text-label-md text-primary transition-colors hover:bg-primary hover:text-white"
+          >Shop</button>
+          <button
+            class="rounded-full bg-primary px-3 py-2.5 font-label-md text-label-md text-white"
+          >Consultation</button>
         </div>
       </div>
     </nav>
@@ -1238,26 +1270,23 @@
             Crafting organic sanctuaries for modern life through architectural
             plant design.
           </p>
-          <div class="flex gap-4">
-            <a
-              class="text-on-surface-variant hover:text-primary transition-colors"
-              href="#"
-              ><span class="material-symbols-outlined">public</span></a
-            >
-            <a
-              class="text-on-surface-variant hover:text-primary transition-colors"
-              href="#"
-              ><span class="material-symbols-outlined">share</span></a
-            >
-            <a
-              class="text-on-surface-variant hover:text-primary transition-colors"
-              href="#"
-              ><span class="material-symbols-outlined">location_on</span></a
-            >
+          <div class="flex flex-col items-start gap-3">
+            <span class="font-label-md text-sm text-primary">Follow us</span>
+            <div class="flex gap-3">
+              <a class="footer-social-link" href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-9h3l.5-3h-3.5V8.1c0-.87.29-1.46 1.52-1.46H17V4.07A26.5 26.5 0 0 0 14.7 4C12.42 4 11 5.39 11 7.94V10H8v3h3v9h2.5Z" /></svg>
+              </a>
+              <a class="footer-social-link" href="#" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 5.82A4.85 4.85 0 0 1 13.77 4h-2.66v10.65a2.25 2.25 0 1 1-1.54-2.13V9.81a4.92 4.92 0 1 0 4.2 4.87V9.27a7.55 7.55 0 0 0 4.4 1.41V8.04c-.52 0-1.04-.08-1.57-.22Z" /></svg>
+              </a>
+              <a class="footer-social-link" href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z" /></svg>
+              </a>
+            </div>
           </div>
         </div>
         <div>
-          <h4 class="font-label-md text-primary mb-6">Services</h4>
+          <h4 class="footer-column-title">Services</h4>
           <ul class="space-y-4 font-body-md text-on-surface-variant">
             <li>
               <a class="hover:text-primary transition-colors" href="#"
@@ -1282,7 +1311,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-label-md text-primary mb-6">Company</h4>
+          <h4 class="footer-column-title">Company</h4>
           <ul class="space-y-4 font-body-md text-on-surface-variant">
             <li>
               <a class="hover:text-primary transition-colors" href="#"
@@ -1307,7 +1336,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="font-label-md text-primary mb-6">Support</h4>
+          <h4 class="footer-column-title">Support</h4>
           <ul class="space-y-4 font-body-md text-on-surface-variant">
             <li>
               <a class="hover:text-primary transition-colors" href="#"
@@ -1340,16 +1369,27 @@
         </p>
       </div>
     </footer>
-    <!-- Persistent Consultation Widget (FAB) -->
-    <button
-      class="consultation-fab fixed bottom-8 right-8 w-16 h-16 rounded-full text-white flex items-center justify-center z-40 transition-transform active:scale-90 hover:scale-110 group"
-    >
-      <span class="material-symbols-outlined text-[28px]">calendar_month</span>
-      <span
-        class="absolute right-20 bg-primary px-4 py-2 rounded-lg text-white text-sm font-label-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
-        >Book Consultation</span
+    <!-- Floating contact buttons -->
+    <div class="fixed bottom-6 right-4 z-40 flex flex-col gap-3 md:bottom-8 md:right-8">
+      <button
+        class="contact-fab contact-fab-messenger group"
+        type="button"
+        aria-label="Contact us via Messenger"
       >
-    </button>
+        <svg class="h-8 w-8" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M12 2C6.48 2 2 6.15 2 11.27c0 2.92 1.46 5.52 3.74 7.22V22l3.42-1.88c.91.25 1.87.42 2.84.42 5.52 0 10-4.15 10-9.27S17.52 2 12 2Zm.99 12.48-2.55-2.72-4.98 2.72 5.48-5.82 2.62 2.72 4.91-2.72-5.48 5.82Z" />
+        </svg>
+        <span class="contact-fab-tooltip">Messenger</span>
+      </button>
+      <button
+        class="contact-fab contact-fab-zalo group"
+        type="button"
+        aria-label="Contact us via Zalo"
+      >
+        <span class="text-[15px] font-extrabold tracking-[-0.06em]">Zalo</span>
+        <span class="contact-fab-tooltip">Zalo</span>
+      </button>
+    </div>
     <script src="../js/app.js"></script>
   </body>
 </html>

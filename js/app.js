@@ -65,6 +65,63 @@ window.addEventListener("hashchange", () => {
   topNavMenus.forEach((menu) => setActiveTopNavLink(menu, window.location.hash));
 });
 
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+const mobileNavigation = document.querySelector(".mobile-navigation");
+const mobileMenuIcon = mobileMenuToggle?.querySelector(".mobile-menu-icon");
+
+const setMobileNavigationOpen = (isOpen) => {
+  if (!mobileMenuToggle || !mobileNavigation) return;
+
+  mobileNavigation.classList.toggle("hidden", !isOpen);
+  mobileMenuToggle.setAttribute("aria-expanded", String(isOpen));
+  mobileMenuToggle.setAttribute(
+    "aria-label",
+    isOpen
+      ? mobileMenuToggle.dataset.closeLabel || "Close navigation menu"
+      : mobileMenuToggle.dataset.openLabel || "Open navigation menu",
+  );
+
+  if (mobileMenuIcon) {
+    mobileMenuIcon.textContent = isOpen ? "close" : "menu";
+  }
+};
+
+if (mobileMenuToggle && mobileNavigation) {
+  mobileMenuToggle.dataset.openLabel = mobileMenuToggle.getAttribute("aria-label");
+  mobileMenuToggle.dataset.closeLabel = document.documentElement.lang === "vi"
+    ? "Đóng menu điều hướng"
+    : "Close navigation menu";
+
+  mobileMenuToggle.addEventListener("click", () => {
+    setMobileNavigationOpen(mobileMenuToggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  mobileNavigation.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMobileNavigationOpen(false));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      mobileMenuToggle.getAttribute("aria-expanded") === "true" &&
+      !mobileNavigation.contains(event.target) &&
+      !mobileMenuToggle.contains(event.target)
+    ) {
+      setMobileNavigationOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setMobileNavigationOpen(false);
+      mobileMenuToggle.focus();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) setMobileNavigationOpen(false);
+  });
+}
+
 const viewAllPlantsTrigger = document.querySelector(".view-all-plants-trigger");
 const featuredPlantsGrid = document.querySelector(".featured-plants-grid");
 const plantShowcase = document.querySelector("#plant-showcase");
