@@ -122,6 +122,44 @@ if (mobileMenuToggle && mobileNavigation) {
   });
 }
 
+const galleryAutoCards = document.querySelectorAll(".gallery-auto-card");
+
+if (galleryAutoCards.length) {
+  const galleryObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const cardIndex = Array.from(galleryAutoCards).indexOf(entry.target);
+        window.setTimeout(() => entry.target.classList.add("is-in-view"), cardIndex * 320);
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.35 },
+  );
+
+  galleryAutoCards.forEach((card) => galleryObserver.observe(card));
+}
+
+const serviceAutoCards = document.querySelectorAll(".service-auto-card");
+
+if (serviceAutoCards.length) {
+  const serviceObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const cardIndex = Array.from(serviceAutoCards).indexOf(entry.target);
+        window.setTimeout(() => entry.target.classList.add("is-in-view"), cardIndex * 220);
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.25 },
+  );
+
+  serviceAutoCards.forEach((card) => serviceObserver.observe(card));
+}
+
 const viewAllPlantsTrigger = document.querySelector(".view-all-plants-trigger");
 const featuredPlantsGrid = document.querySelector(".featured-plants-grid");
 const plantShowcase = document.querySelector("#plant-showcase");
