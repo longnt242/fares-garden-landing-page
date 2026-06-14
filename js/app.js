@@ -138,9 +138,18 @@ if (viewAllPlantsTrigger && featuredPlantsGrid && plantShowcase) {
   viewAllPlantsTrigger.addEventListener("click", (event) => {
     event.preventDefault();
 
-    const isVisible = plantShowcase.classList.toggle("is-visible");
+    const isShowcaseOnly = viewAllPlantsTrigger.dataset.showcaseOnly === "true";
+    const isVisible = isShowcaseOnly
+      ? true
+      : plantShowcase.classList.toggle("is-visible");
 
-    featuredPlantsGrid.classList.toggle("is-hidden", isVisible);
+    if (isShowcaseOnly) {
+      plantShowcase.classList.add("is-visible");
+      featuredPlantsGrid.classList.add("is-hidden");
+    } else {
+      featuredPlantsGrid.classList.toggle("is-hidden", isVisible);
+    }
+
     viewAllPlantsTrigger.setAttribute("aria-expanded", String(isVisible));
     plantShowcase.setAttribute("aria-hidden", String(!isVisible));
 
